@@ -65,9 +65,8 @@ cdk.out/
 # Embedded Git Repositories (already have their own version control)
 # These folders are excluded as they are separate git repositories
 aws-cdk-learning/
-aws-cdk-typescript-series/01-aws-cdk-series/
-aws-cdk-typescript-series/02-aws-cdk-series/using-the-aws-cdk-with-localstack-and-aws-cdk-local/
-learn-aws-cdk/my-first-cdk-app/
+aws-cdk-typescript-series/
+learn-aws-cdk/
 reactjs-todo-application/
 rpi5/
 rpi5-8gb-nvme-issues-and-fixes/
