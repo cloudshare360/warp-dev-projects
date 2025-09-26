@@ -1,0 +1,59 @@
+RPi5 OPTIMIZATION ROLLBACK INSTRUCTIONS
+=======================================
+
+If your RPi5 becomes unstable after applying optimizations, you have several rollback options:
+
+METHOD 1 - Interactive Rollback (Safest)
+----------------------------------------
+1. Log in to your system (if possible)
+2. Run: sudo /usr/local/bin/rpi5-request-rollback
+3. Follow the prompts and reboot
+
+METHOD 2 - Manual Boot Flag
+---------------------------
+1. Power off the RPi5
+2. Remove the SD card and insert it into another computer
+3. In the boot partition, create an empty file called "rpi5_rollback_requested"
+4. Safely eject and reinsert the SD card into RPi5
+5. Power on - the system will automatically rollback
+
+METHOD 3 - Manual Script Execution
+-----------------------------------
+1. Boot into recovery mode or single-user mode
+2. Run: /home/sri/rpi5-optimization-backup/restore_system.sh
+3. Reboot normally
+
+METHOD 4 - GRUB Boot Menu (if available)
+-----------------------------------------
+1. During boot, access GRUB menu
+2. Select "RPi5 - Rollback Optimizations"
+3. System will boot and automatically rollback
+
+MANUAL FILE RESTORATION (Last Resort)
+--------------------------------------
+If all automated methods fail:
+1. Boot from a rescue disk/SD card
+2. Mount your main filesystem
+3. Restore files manually from: /home/sri/rpi5-optimization-backup/[timestamp]/
+   - Copy *.backup files to their original locations
+   - Remove the .backup extension
+
+Files to restore:
+- /etc/sysctl.conf
+- /etc/dphys-swapfile  
+- /boot/firmware/config.txt (or /boot/config.txt)
+- /etc/systemd/system.conf
+
+After manual restoration:
+- sudo swapoff -a
+- sudo systemctl restart dphys-swapfile
+- sudo sysctl -p
+- sudo reboot
+
+PREVENTION
+----------
+- Test the rollback process before applying optimizations
+- Keep this documentation accessible
+- Ensure you have physical access to the RPi5
+
+For support: Check logs in /home/sri/rpi5-optimization-backup/stress_test_logs/

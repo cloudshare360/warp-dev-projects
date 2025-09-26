@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "message": "API is healthy",
+  "data": {
+    "status": "healthy",
+    "timestamp": "2025-09-20T18:36:00.000Z",
+    "uptime": "1234.56s",
+    "version": "1.0.0",
+    "environment": "development",
+    "pid": 12345,
+    "memory": {
+      "used": 18,
+      "total": 20,
+      "external": 3
+    },
+    "cpu": {
+      "user": 123456,
+      "system": 12345
+    },
+    "platform": "linux",
+    "nodeVersion": "v22.19.0"
+  },
+  "meta": {
+    "timestamp": "2025-09-20T18:36:00.000Z",
+    "version": "1.0.0",
+    "responseTime": "2ms"
+  }
+}

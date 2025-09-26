@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard Wireframes - Todo App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .wireframe-container {
+            background: white;
+            border: 2px solid #333;
+            margin: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .wireframe-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+        .header {
+            background: #007bff;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #333;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            border: 2px solid white;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-content {
+            display: flex;
+            min-height: 600px;
+        }
+        .sidebar {
+            width: 250px;
+            background: #f8f9fa;
+            border-right: 2px solid #ddd;
+            padding: 20px;
+        }
+        .content-area {
+            flex: 1;
+            padding: 20px;
+        }
+        .sidebar-menu {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar-menu li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+        }
+        .sidebar-menu li.active {
+            background: #007bff;
+            color: white;
+            border-color: #333;
+        }
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            border: 2px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .todo-section {
+            background: white;
+            border: 2px solid #333;
+            border-radius: 4px;
+            padding: 20px;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+        .add-todo {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+        }
+        .add-todo input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: 2px solid #333;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .btn-secondary {
+            background: white;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+        .todo-filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .filter-btn.active {
+            background: #007bff;
+            color: white;
+            border-color: #333;
+        }
+        .todo-list {
+            space: 10px;
+        }
+        .todo-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            background: white;
+            border-radius: 4px;
+        }
+        .todo-item.completed {
+            background: #f8f9fa;
+            opacity: 0.7;
+        }
+        .todo-checkbox {
+            width: 20px;
+            height: 20px;
+        }
+        .todo-content {
+            flex: 1;
+        }
+        .todo-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .todo-meta {
+            font-size: 14px;
+            color: #666;
+        }
+        .todo-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .priority-high {
+            border-left: 4px solid #dc3545;
+        }
+        .priority-medium {
+            border-left: 4px solid #ffc107;
+        }
+        .priority-low {
+            border-left: 4px solid #28a745;
+        }
+        .category-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            background: #e9ecef;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wireframe-container">
+        <div class="wireframe-title">USER DASHBOARD - MAIN VIEW</div>
+        
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">[LOGO] Todo App</div>
+            <div class="user-menu">
+                <span>🔔 [3]</span>
+                <span>Welcome, John Doe</span>
+                <div class="user-avatar">JD</div>
+                <button class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h3>Navigation</h3>
+                <ul class="sidebar-menu">
+                    <li class="active">📋 My Todos</li>
+                    <li>📅 Calendar View</li>
+                    <li>📈 Progress</li>
+                    <li>🏷️ Categories</li>
+                    <li>⭐ Important</li>
+                    <li>✅ Completed</li>
+                    <li>🗑️ Trash</li>
+                </ul>
+                
+                <h3 style="margin-top: 30px;">Categories</h3>
+                <ul class="sidebar-menu">
+                    <li>💼 Work <span style="float: right;">(12)</span></li>
+                    <li>🏠 Personal <span style="float: right;">(8)</span></li>
+                    <li>🛒 Shopping <span style="float: right;">(3)</span></li>
+                    <li>💡 Ideas <span style="float: right;">(5)</span></li>
+                    <li>+ Add Category</li>
+                </ul>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="content-area">
+                <!-- Stats Cards -->
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-number">28</div>
+                        <div>Total Tasks</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">15</div>
+                        <div>Pending</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">13</div>
+                        <div>Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5</div>
+                        <div>Overdue</div>
+                    </div>
+                </div>
+                
+                <!-- Todo Section -->
+                <div class="todo-section">
+                    <div class="section-header">
+                        <h2>My Todo List</h2>
+                        <div>
+                            <button class="btn">+ Add Todo</button>
+                            <button class="btn btn-secondary">⚙️ Settings</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Add Todo -->
+                    <div class="add-todo">
+                        <input type="text" placeholder="Quick add a new todo..." />
+                        <select>
+                            <option>Priority</option>
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select>
+                        <select>
+                            <option>Category</option>
+                            <option>Work</option>
+                            <option>Personal</option>
+                            <option>Shopping</option>
+                        </select>
+                        <button class="btn">Add</button>
+                    </div>
+                    
+                    <!-- Filters -->
+                    <div class="todo-filters">
+                        <button class="filter-btn active">All</button>
+                        <button class="filter-btn">Pending</button>
+                        <button class="filter-btn">Completed</button>
+                        <button class="filter-btn">High Priority</button>
+                        <button class="filter-btn">Due Today</button>
+                        <button class="filter-btn">Overdue</button>
+                    </div>
+                    
+                    <!-- Todo List -->
+                    <div class="todo-list">
+                        <div class="todo-item priority-high">
+                            <input type="checkbox" class="todo-checkbox" />
+                            <div class="todo-content">
+                                <div class="todo-title">Complete project proposal</div>
+                                <div class="todo-meta">
+                                    <span class="category-tag">Work</span>
+                                    <span>Due: Today, 5:00 PM</span>
+                                    <span>Priority: High</span>
+                                </div>
+                            </div>
+                            <div class="todo-actions">
+                                <button>✏️</button>
+                                <button>🗑️</button>
+                                <button>⭐</button>
+                            </div>
+                        </div>
+                        
+                        <div class="todo-item priority-medium">
+                            <input type="checkbox" class="todo-checkbox" />
+                            <div class="todo-content">
+                                <div class="todo-title">Buy groceries for dinner</div>
+                                <div class="todo-meta">
+                                    <span class="category-tag">Shopping</span>
+                                    <span>Due: Tomorrow</span>
+                                    <span>Priority: Medium</span>
+                                </div>
+                            </div>
+                            <div class="todo-actions">
+                                <button>✏️</button>
+                                <button>🗑️</button>
+                                <button>⭐</button>
+                            </div>
+                        </div>
+                        
+                        <div class="todo-item priority-low completed">
+                            <input type="checkbox" class="todo-checkbox" checked />
+                            <div class="todo-content">
+                                <div class="todo-title" style="text-decoration: line-through;">Review team meeting notes</div>
+                                <div class="todo-meta">
+                                    <span class="category-tag">Work</span>
+                                    <span>Completed: Yesterday</span>
+                                    <span>Priority: Low</span>
+                                </div>
+                            </div>
+                            <div class="todo-actions">
+                                <button>↺</button>
+                                <button>🗑️</button>
+                            </div>
+                        </div>
+                        
+                        <div class="todo-item priority-high">
+                            <input type="checkbox" class="todo-checkbox" />
+                            <div class="todo-content">
+                                <div class="todo-title">Call insurance company</div>
+                                <div class="todo-meta">
+                                    <span class="category-tag">Personal</span>
+                                    <span>Due: Overdue (2 days)</span>
+                                    <span>Priority: High</span>
+                                </div>
+                            </div>
+                            <div class="todo-actions">
+                                <button>✏️</button>
+                                <button>🗑️</button>
+                                <button>⭐</button>
+                            </div>
+                        </div>
+                        
+                        <div class="todo-item priority-low">
+                            <input type="checkbox" class="todo-checkbox" />
+                            <div class="todo-content">
+                                <div class="todo-title">Research vacation destinations</div>
+                                <div class="todo-meta">
+                                    <span class="category-tag">Ideas</span>
+                                    <span>No due date</span>
+                                    <span>Priority: Low</span>
+                                </div>
+                            </div>
+                            <div class="todo-actions">
+                                <button>✏️</button>
+                                <button>🗑️</button>
+                                <button>⭐</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div style="text-align: center; margin-top: 20px; padding: 15px; border-top: 1px solid #ddd;">
+                        <button class="btn btn-secondary">← Previous</button>
+                        <span style="margin: 0 20px;">Page 1 of 3 (15 items)</span>
+                        <button class="btn btn-secondary">Next →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

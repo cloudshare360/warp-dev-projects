@@ -1,0 +1,490 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "john.doe@example.com",
+      "password": "hashedPassword123",
+      "fullName": "John Doe",
+      "role": "user",
+      "isActive": true,
+      "emailVerified": true,
+      "createdAt": "2024-09-20T10:00:00Z",
+      "lastLoginAt": "2024-09-24T14:30:00Z",
+      "profileImage": "",
+      "settings": {
+        "theme": "light",
+        "notifications": true,
+        "language": "en"
+      }
+    },
+    {
+      "id": "2",
+      "email": "admin@todoapp.com",
+      "password": "adminHashedPassword456",
+      "fullName": "Admin User",
+      "role": "admin",
+      "isActive": true,
+      "emailVerified": true,
+      "createdAt": "2024-09-15T08:00:00Z",
+      "lastLoginAt": "2024-09-24T14:00:00Z",
+      "profileImage": "",
+      "settings": {
+        "theme": "dark",
+        "notifications": true,
+        "language": "en"
+      }
+    },
+    {
+      "id": "3",
+      "email": "sarah.miller@example.com",
+      "password": "hashedPassword789",
+      "fullName": "Sarah Miller",
+      "role": "user",
+      "isActive": true,
+      "emailVerified": true,
+      "createdAt": "2024-09-18T12:00:00Z",
+      "lastLoginAt": "2024-09-24T13:45:00Z",
+      "profileImage": "",
+      "settings": {
+        "theme": "light",
+        "notifications": false,
+        "language": "en"
+      }
+    },
+    {
+      "id": "4",
+      "email": "mike.johnson@example.com",
+      "password": "hashedPassword101",
+      "fullName": "Mike Johnson",
+      "role": "user",
+      "isActive": true,
+      "emailVerified": true,
+      "createdAt": "2024-09-22T09:30:00Z",
+      "lastLoginAt": "2024-09-24T14:15:00Z",
+      "profileImage": "",
+      "settings": {
+        "theme": "light",
+        "notifications": true,
+        "language": "en"
+      }
+    },
+    {
+      "id": "5",
+      "email": "anna.brown@example.com",
+      "password": "hashedPassword202",
+      "fullName": "Anna Brown",
+      "role": "user",
+      "isActive": false,
+      "emailVerified": false,
+      "createdAt": "2024-09-24T13:00:00Z",
+      "lastLoginAt": null,
+      "profileImage": "",
+      "settings": {
+        "theme": "light",
+        "notifications": true,
+        "language": "en"
+      }
+    }
+  ],
+  "todos": [
+    {
+      "id": "1",
+      "userId": "1",
+      "title": "Complete project proposal",
+      "description": "Prepare the final version of the project proposal including budget analysis, timeline, and resource allocation. Review with team lead before submission.",
+      "category": "work",
+      "priority": "high",
+      "status": "in-progress",
+      "progress": 65,
+      "dueDate": "2024-09-24T17:00:00Z",
+      "createdAt": "2024-09-22T10:00:00Z",
+      "updatedAt": "2024-09-24T14:30:00Z",
+      "tags": ["urgent", "meeting", "deadline"],
+      "attachments": [
+        {
+          "id": "att1",
+          "filename": "meeting-agenda.pdf",
+          "size": 245760,
+          "type": "application/pdf",
+          "url": "/uploads/meeting-agenda.pdf"
+        }
+      ],
+      "subtasks": [
+        {
+          "id": "sub1",
+          "title": "Review previous meeting notes",
+          "completed": true,
+          "createdAt": "2024-09-22T10:05:00Z"
+        },
+        {
+          "id": "sub2",
+          "title": "Prepare presentation slides",
+          "completed": false,
+          "createdAt": "2024-09-22T10:10:00Z"
+        },
+        {
+          "id": "sub3",
+          "title": "Review budget analysis",
+          "completed": true,
+          "createdAt": "2024-09-23T16:15:00Z"
+        }
+      ],
+      "reminders": [
+        {
+          "id": "rem1",
+          "type": "email",
+          "timing": "1hour",
+          "sent": false
+        }
+      ],
+      "isImportant": true,
+      "isArchived": false
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "title": "Buy groceries for dinner",
+      "description": "Get ingredients for tonight's dinner party - need vegetables, meat, and dessert items.",
+      "category": "personal",
+      "priority": "medium",
+      "status": "pending",
+      "progress": 0,
+      "dueDate": "2024-09-25T18:00:00Z",
+      "createdAt": "2024-09-24T09:00:00Z",
+      "updatedAt": "2024-09-24T09:00:00Z",
+      "tags": ["shopping", "dinner"],
+      "attachments": [],
+      "subtasks": [
+        {
+          "id": "sub4",
+          "title": "Buy vegetables",
+          "completed": false,
+          "createdAt": "2024-09-24T09:05:00Z"
+        },
+        {
+          "id": "sub5",
+          "title": "Get meat from butcher",
+          "completed": false,
+          "createdAt": "2024-09-24T09:10:00Z"
+        }
+      ],
+      "reminders": [],
+      "isImportant": false,
+      "isArchived": false
+    },
+    {
+      "id": "3",
+      "userId": "1",
+      "title": "Review team meeting notes",
+      "description": "Go through the notes from yesterday's team meeting and extract action items.",
+      "category": "work",
+      "priority": "low",
+      "status": "completed",
+      "progress": 100,
+      "dueDate": "2024-09-23T17:00:00Z",
+      "createdAt": "2024-09-23T08:00:00Z",
+      "updatedAt": "2024-09-23T16:00:00Z",
+      "tags": ["meeting", "notes"],
+      "attachments": [],
+      "subtasks": [],
+      "reminders": [],
+      "isImportant": false,
+      "isArchived": false
+    },
+    {
+      "id": "4",
+      "userId": "1",
+      "title": "Call insurance company",
+      "description": "Follow up on the claim submitted last week. Need to check status and provide additional documentation if required.",
+      "category": "personal",
+      "priority": "high",
+      "status": "pending",
+      "progress": 0,
+      "dueDate": "2024-09-22T16:00:00Z",
+      "createdAt": "2024-09-20T14:00:00Z",
+      "updatedAt": "2024-09-20T14:00:00Z",
+      "tags": ["insurance", "urgent", "phone-call"],
+      "attachments": [],
+      "subtasks": [],
+      "reminders": [
+        {
+          "id": "rem2",
+          "type": "push",
+          "timing": "30min",
+          "sent": true
+        }
+      ],
+      "isImportant": true,
+      "isArchived": false
+    },
+    {
+      "id": "5",
+      "userId": "1",
+      "title": "Research vacation destinations",
+      "description": "Look into potential vacation spots for the summer holiday. Consider budget, activities, and weather.",
+      "category": "personal",
+      "priority": "low",
+      "status": "pending",
+      "progress": 25,
+      "dueDate": null,
+      "createdAt": "2024-09-21T11:00:00Z",
+      "updatedAt": "2024-09-24T10:00:00Z",
+      "tags": ["vacation", "research", "planning"],
+      "attachments": [],
+      "subtasks": [
+        {
+          "id": "sub6",
+          "title": "Check flight prices",
+          "completed": true,
+          "createdAt": "2024-09-21T11:05:00Z"
+        },
+        {
+          "id": "sub7",
+          "title": "Research hotels",
+          "completed": false,
+          "createdAt": "2024-09-21T11:10:00Z"
+        }
+      ],
+      "reminders": [],
+      "isImportant": false,
+      "isArchived": false
+    },
+    {
+      "id": "6",
+      "userId": "3",
+      "title": "Prepare monthly report",
+      "description": "Compile data and prepare the monthly performance report for the team.",
+      "category": "work",
+      "priority": "high",
+      "status": "in-progress",
+      "progress": 40,
+      "dueDate": "2024-09-25T17:00:00Z",
+      "createdAt": "2024-09-23T09:00:00Z",
+      "updatedAt": "2024-09-24T11:00:00Z",
+      "tags": ["report", "monthly", "data"],
+      "attachments": [],
+      "subtasks": [],
+      "reminders": [],
+      "isImportant": true,
+      "isArchived": false
+    },
+    {
+      "id": "7",
+      "userId": "4",
+      "title": "Fix website bug",
+      "description": "Investigate and fix the login issue reported by users on mobile devices.",
+      "category": "work",
+      "priority": "high",
+      "status": "in-progress",
+      "progress": 80,
+      "dueDate": "2024-09-24T18:00:00Z",
+      "createdAt": "2024-09-24T08:00:00Z",
+      "updatedAt": "2024-09-24T14:00:00Z",
+      "tags": ["bug", "mobile", "urgent"],
+      "attachments": [],
+      "subtasks": [
+        {
+          "id": "sub8",
+          "title": "Reproduce the issue",
+          "completed": true,
+          "createdAt": "2024-09-24T08:05:00Z"
+        },
+        {
+          "id": "sub9",
+          "title": "Implement fix",
+          "completed": true,
+          "createdAt": "2024-09-24T10:00:00Z"
+        },
+        {
+          "id": "sub10",
+          "title": "Test on different devices",
+          "completed": false,
+          "createdAt": "2024-09-24T14:00:00Z"
+        }
+      ],
+      "reminders": [],
+      "isImportant": true,
+      "isArchived": false
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "userId": "1",
+      "name": "Work",
+      "color": "#007bff",
+      "icon": "💼",
+      "createdAt": "2024-09-20T10:00:00Z",
+      "todoCount": 2
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "name": "Personal",
+      "color": "#28a745",
+      "icon": "🏠",
+      "createdAt": "2024-09-20T10:05:00Z",
+      "todoCount": 3
+    },
+    {
+      "id": "3",
+      "userId": "1",
+      "name": "Shopping",
+      "color": "#ffc107",
+      "icon": "🛒",
+      "createdAt": "2024-09-20T10:10:00Z",
+      "todoCount": 0
+    },
+    {
+      "id": "4",
+      "userId": "1",
+      "name": "Health",
+      "color": "#dc3545",
+      "icon": "❤️",
+      "createdAt": "2024-09-20T10:15:00Z",
+      "todoCount": 0
+    },
+    {
+      "id": "5",
+      "userId": "1",
+      "name": "Ideas",
+      "color": "#6f42c1",
+      "icon": "💡",
+      "createdAt": "2024-09-21T14:00:00Z",
+      "todoCount": 0
+    },
+    {
+      "id": "6",
+      "userId": "3",
+      "name": "Work",
+      "color": "#007bff",
+      "icon": "💼",
+      "createdAt": "2024-09-18T12:00:00Z",
+      "todoCount": 1
+    },
+    {
+      "id": "7",
+      "userId": "4",
+      "name": "Work",
+      "color": "#007bff",
+      "icon": "💼",
+      "createdAt": "2024-09-22T09:30:00Z",
+      "todoCount": 1
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "1",
+      "userId": "1",
+      "action": "created_todo",
+      "entityType": "todo",
+      "entityId": "2",
+      "details": {
+        "todoTitle": "Buy groceries for dinner",
+        "category": "personal"
+      },
+      "timestamp": "2024-09-24T09:00:00Z",
+      "ipAddress": "192.168.1.100"
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "action": "updated_progress",
+      "entityType": "todo",
+      "entityId": "1",
+      "details": {
+        "oldProgress": 50,
+        "newProgress": 65,
+        "todoTitle": "Complete project proposal"
+      },
+      "timestamp": "2024-09-24T14:30:00Z",
+      "ipAddress": "192.168.1.100"
+    },
+    {
+      "id": "3",
+      "userId": "3",
+      "action": "login",
+      "entityType": "user",
+      "entityId": "3",
+      "details": {
+        "loginMethod": "email",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+      },
+      "timestamp": "2024-09-24T13:45:00Z",
+      "ipAddress": "192.168.1.105"
+    },
+    {
+      "id": "4",
+      "userId": "4",
+      "action": "completed_subtask",
+      "entityType": "todo",
+      "entityId": "7",
+      "details": {
+        "subtaskTitle": "Implement fix",
+        "todoTitle": "Fix website bug"
+      },
+      "timestamp": "2024-09-24T14:00:00Z",
+      "ipAddress": "192.168.1.110"
+    },
+    {
+      "id": "5",
+      "userId": "5",
+      "action": "registered",
+      "entityType": "user",
+      "entityId": "5",
+      "details": {
+        "email": "anna.brown@example.com",
+        "role": "user"
+      },
+      "timestamp": "2024-09-24T13:00:00Z",
+      "ipAddress": "192.168.1.120"
+    }
+  ],
+  "systemMetrics": {
+    "totalUsers": 5,
+    "activeUsers": 4,
+    "totalTodos": 7,
+    "completedTodos": 1,
+    "pendingTodos": 4,
+    "inProgressTodos": 2,
+    "overdueTodos": 1,
+    "systemHealth": {
+      "status": "healthy",
+      "cpuUsage": 45,
+      "memoryUsage": 67,
+      "diskUsage": 23,
+      "uptime": "15 days, 4 hours",
+      "lastBackup": "2024-09-24T02:00:00Z"
+    },
+    "lastUpdated": "2024-09-24T14:55:00Z"
+  },
+  "notifications": [
+    {
+      "id": "1",
+      "userId": "1",
+      "type": "todo_due_soon",
+      "title": "Todo Due Soon",
+      "message": "Complete project proposal is due in 2 hours",
+      "read": false,
+      "createdAt": "2024-09-24T15:00:00Z"
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "type": "todo_overdue",
+      "title": "Overdue Todo",
+      "message": "Call insurance company is now 2 days overdue",
+      "read": false,
+      "createdAt": "2024-09-24T10:00:00Z"
+    },
+    {
+      "id": "3",
+      "userId": "4",
+      "type": "todo_completed",
+      "title": "Subtask Completed",
+      "message": "You completed: Implement fix",
+      "read": true,
+      "createdAt": "2024-09-24T14:00:00Z"
+    }
+  ]
+}

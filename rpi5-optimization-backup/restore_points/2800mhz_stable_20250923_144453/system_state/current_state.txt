@@ -1,0 +1,39 @@
+=== 2800MHz Stable Configuration State ===
+Timestamp: Tue 23 Sep 14:44:53 CDT 2025
+Hostname: SriRP5
+
+=== CPU Information ===
+Current Frequency: 2800MHz
+Temperature: temp=56.5'C
+Voltage: volt=1.0000V
+Throttling: throttled=0x0
+
+=== Memory Information ===
+               total        used        free      shared  buff/cache   available
+Mem:           7.8Gi       2.4Gi       3.4Gi       203Mi       2.4Gi       5.3Gi
+Swap:          4.0Gi       1.0Gi       3.0Gi
+
+=== CPU Details ===
+Architecture:                            aarch64
+Model name:                              Cortex-A76
+Thread(s) per core:                      1
+Core(s) per cluster:                     4
+CPU max MHz:                             2800.0000
+CPU min MHz:                             2800.0000
+
+=== Load Average ===
+ 14:44:53 up  1:14,  2 users,  load average: 0.87, 2.14, 3.33
+
+=== Kernel Information ===
+Linux SriRP5 6.12.47+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.47-1+rpt1~bookworm (2025-09-16) aarch64 GNU/Linux
+
+=== OS Information ===
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"

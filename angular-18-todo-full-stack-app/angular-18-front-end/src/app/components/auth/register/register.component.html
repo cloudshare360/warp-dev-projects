@@ -1,0 +1,106 @@
+<div class="register-container">
+  <div class="register-card">
+    <h2>Create Account</h2>
+    <form (ngSubmit)="onSubmit()" class="register-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            [(ngModel)]="registerData.firstName"
+            name="firstName"
+            required
+            class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            [(ngModel)]="registerData.lastName"
+            name="lastName"
+            required
+            class="form-control">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          [(ngModel)]="registerData.username"
+          name="username"
+          required
+          class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="registerData.email"
+          name="email"
+          required
+          class="form-control">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            [(ngModel)]="registerData.password"
+            name="password"
+            required
+            class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            [(ngModel)]="registerData.confirmPassword"
+            name="confirmPassword"
+            required
+            class="form-control">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="roleType">Account Type:</label>
+        <select
+          id="roleType"
+          [(ngModel)]="registerData.roleType"
+          name="roleType"
+          class="form-control">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary" [disabled]="isLoading">
+          {{ isLoading ? 'Creating Account...' : 'Create Account' }}
+        </button>
+      </div>
+    </form>
+
+    <div class="form-links">
+      <p><a routerLink="/login">Already have an account? Login here</a></p>
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Wireframes - Todo App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .wireframe-container {
+            background: white;
+            border: 2px solid #333;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .wireframe-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin: -20px -20px 20px -20px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 2px solid #ddd;
+            padding: 30px;
+            background: #fafafa;
+        }
+        .form-field {
+            margin: 15px 0;
+        }
+        .form-field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-field input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: white;
+            box-sizing: border-box;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: 2px solid #333;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .btn-secondary {
+            background: white;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+        .link {
+            text-align: center;
+            margin: 10px 0;
+            color: #007bff;
+            text-decoration: underline;
+        }
+        .logo-area {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px dashed #ccc;
+        }
+        .role-selector {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .role-option {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #ddd;
+            text-align: center;
+            cursor: pointer;
+            background: #f9f9f9;
+        }
+        .role-option.selected {
+            border-color: #007bff;
+            background: #e7f3ff;
+        }
+        .error-message {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .success-message {
+            color: #28a745;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Page -->
+    <div class="wireframe-container">
+        <div class="wireframe-title">LOGIN PAGE</div>
+        <div class="form-container">
+            <div class="logo-area">
+                <h2>[LOGO] Todo App</h2>
+                <p>Manage your tasks efficiently</p>
+            </div>
+            
+            <form>
+                <div class="form-field">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                
+                <div class="form-field">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password">
+                </div>
+                
+                <div class="role-selector">
+                    <div class="role-option selected">
+                        <strong>User Login</strong>
+                        <br><small>Access personal todos</small>
+                    </div>
+                    <div class="role-option">
+                        <strong>Admin Login</strong>
+                        <br><small>System administration</small>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Login</button>
+                
+                <div class="link">Forgot Password?</div>
+                
+                <hr style="margin: 20px 0;">
+                
+                <div style="text-align: center;">
+                    <p>Don't have an account?</p>
+                    <button type="button" class="btn btn-secondary">Create Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Registration Page -->
+    <div class="wireframe-container">
+        <div class="wireframe-title">REGISTRATION PAGE</div>
+        <div class="form-container">
+            <div class="logo-area">
+                <h2>[LOGO] Todo App</h2>
+                <p>Create your account</p>
+            </div>
+            
+            <form>
+                <div class="form-field">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-field">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email">
+                    <div class="error-message">[Error: Email already exists]</div>
+                </div>
+                
+                <div class="form-field">
+                    <label>Password</label>
+                    <input type="password" placeholder="Create a strong password">
+                </div>
+                
+                <div class="form-field">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="Confirm your password">
+                </div>
+                
+                <div class="role-selector">
+                    <div class="role-option selected">
+                        <strong>User Account</strong>
+                        <br><small>Personal task management</small>
+                    </div>
+                    <div class="role-option">
+                        <strong>Request Admin</strong>
+                        <br><small>Requires approval</small>
+                    </div>
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <label>
+                        <input type="checkbox"> I agree to the Terms of Service and Privacy Policy
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn">Create Account</button>
+                
+                <hr style="margin: 20px 0;">
+                
+                <div style="text-align: center;">
+                    <p>Already have an account?</p>
+                    <button type="button" class="btn btn-secondary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Password Recovery -->
+    <div class="wireframe-container">
+        <div class="wireframe-title">PASSWORD RECOVERY</div>
+        <div class="form-container">
+            <div class="logo-area">
+                <h2>[LOGO] Todo App</h2>
+                <p>Reset your password</p>
+            </div>
+            
+            <form>
+                <div class="form-field">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your registered email">
+                    <div class="success-message">[Success: Reset link sent to your email]</div>
+                </div>
+                
+                <button type="submit" class="btn">Send Reset Link</button>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <div class="link">Back to Login</div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Reset Password Form -->
+    <div class="wireframe-container">
+        <div class="wireframe-title">RESET PASSWORD FORM</div>
+        <div class="form-container">
+            <div class="logo-area">
+                <h2>[LOGO] Todo App</h2>
+                <p>Create a new password</p>
+            </div>
+            
+            <form>
+                <div class="form-field">
+                    <label>New Password</label>
+                    <input type="password" placeholder="Enter new password">
+                </div>
+                
+                <div class="form-field">
+                    <label>Confirm New Password</label>
+                    <input type="password" placeholder="Confirm new password">
+                </div>
+                
+                <button type="submit" class="btn">Update Password</button>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <div class="link">Back to Login</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

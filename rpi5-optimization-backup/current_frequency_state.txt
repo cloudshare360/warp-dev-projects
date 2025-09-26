@@ -1,0 +1,8 @@
+# RPi5 Adaptive CPU Frequency State
+# This file tracks the current frequency testing progress
+CURRENT_FREQUENCY_INDEX=8
+LAST_SUCCESSFUL_FREQUENCY=2000
+BOOT_FAILURE_COUNT=8
+TESTING_PHASE=recovery
+STABLE_FREQUENCY_FOUND=true
+OPTIMIZATION_LEVEL=conservative

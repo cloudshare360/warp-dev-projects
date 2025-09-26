@@ -1,0 +1,6 @@
+Configuration Name: 2200mhz-step1
+Description: First overclock step: 2200MHz with +6 voltage (10% boost toward 3000MHz)
+Created: Tue 23 Sep 11:35:17 CDT 2025
+Hostname: SriRP5
+Kernel: 6.12.34+rpt-rpi-v8
+User: sri

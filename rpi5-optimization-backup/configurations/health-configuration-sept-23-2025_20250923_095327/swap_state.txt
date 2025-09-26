@@ -1,0 +1,2 @@
+NAME      TYPE SIZE   USED PRIO
+/var/swap file 512M 270.1M   -2

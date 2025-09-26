@@ -1,0 +1,20 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+sri         2741  3.5  6.9 3042672 568964 ?      Sl   12:22   0:10 warp-terminal
+dnsmasq     2293  0.7  1.7 539276 140688 ?       Ssl  12:22   0:02 mongod --auth --bind_ip_all
+sri          888  0.3  1.2 662952 103104 ?       Ssl  12:22   0:01 /usr/bin/labwc -m
+sri         2153  0.0  1.1 428496 91116 ?        SLsl 12:22   0:00 /usr/bin/wayvnc --config /etc/rpi-connect/wayvnc.config --render-cursor --unix-socket --socket=/run/user/1000/rpi-connect-wayvnc-ctl.sock /run/user/1000/rpi-connect-wayvnc.sock
+sri         2755  0.1  1.0 324720 83584 ?        Sl   12:22   0:00 /usr/bin/Xwayland -auth /home/sri/.Xauthority :0 -rootless -core -terminate 10 -listenfd 31 -listenfd 32 -displayfd 96 -wm 93
+sri         1091  0.2  1.0 619344 81484 ?        Sl   12:22   0:00 /usr/bin/pcmanfm --desktop --profile LXDE-pi
+root        1489  0.1  0.9 2486804 75424 ?       Ssl  12:22   0:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        2424  0.4  0.8 4581580 71536 ?       Sl   12:22   0:01 node app
+sri         1080  0.2  0.7 951516 64216 ?        Sl   12:22   0:00 /usr/bin/wf-panel-pi
+sri         1237  0.0  0.7 293068 58668 ?        Ssl  12:22   0:00 /usr/libexec/xdg-desktop-portal-wlr
+root         818  0.0  0.5 2009736 41560 ?       Ssl  12:22   0:00 /usr/bin/containerd
+root        3414  1.0  0.4 375624 39960 ?        Ssl  12:23   0:02 /usr/libexec/packagekitd
+sri          894  0.0  0.3 465600 32340 ?        S<sl 12:22   0:00 /usr/bin/wireplumber
+sri         1207  0.0  0.3 345548 25220 ?        Ssl  12:22   0:00 /usr/libexec/xdg-desktop-portal-gtk
+sri         2750  0.0  0.2 284972 22092 ?        Sl   12:22   0:00 /opt/warpdotdev/warp-terminal/warp terminal-server --parent-pid=2741
+sri         1089  0.0  0.2 341384 20440 ?        Sl   12:22   0:00 /usr/libexec/polkit-mate-authentication-agent-1
+root         753  0.0  0.2 263404 19984 ?        Ssl  12:22   0:00 /usr/sbin/NetworkManager --no-daemon
+sri         1095  0.0  0.2 341004 19864 ?        Sl   12:22   0:00 gtk-nop
+sri          893  0.0  0.1 1238696 15368 ?       Ssl  12:22   0:00 /usr/bin/rpi-connectd -socket /run/user/1000/rpi-connect-wayvnc.sock

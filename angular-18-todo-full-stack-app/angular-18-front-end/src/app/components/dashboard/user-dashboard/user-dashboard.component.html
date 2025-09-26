@@ -1,0 +1,68 @@
+<div class="dashboard-container" *ngIf="!isLoading; else loadingTemplate">
+  <!-- Header Section -->
+  <header class="dashboard-header">
+    <div class="welcome-section">
+      <h1>Welcome, {{ currentUser?.firstName }} {{ currentUser?.lastName }}</h1>
+      <p class="user-info">{{ currentUser?.email }} | {{ currentUser?.roleType | titlecase }}</p>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-secondary" (click)="logout()">Logout</button>
+    </div>
+  </header>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="stats-card">
+      <div class="stat-item">
+        <span class="stat-number">{{ todoStats.total }}</span>
+        <span class="stat-label">Total Tasks</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">{{ todoStats.pending }}</span>
+        <span class="stat-label">Pending</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">{{ todoStats.completed }}</span>
+        <span class="stat-label">Completed</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">{{ categories.length }}</span>
+        <span class="stat-label">Categories</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+    <div class="sidebar">
+      <app-category-list 
+        [categories]="categories"
+        [selectedCategoryId]="selectedCategoryId"
+        [currentUserId]="currentUser?.id!"
+        (categorySelected)="onCategorySelected($event)"
+        (dataChanged)="onDataChanged()">
+      </app-category-list>
+    </div>
+
+    <div class="content">
+      <app-todo-list 
+        [todos]="filteredTodos"
+        [categories]="categories"
+        [currentUserId]="currentUser?.id!"
+        (dataChanged)="onDataChanged()">
+      </app-todo-list>
+    </div>
+  </main>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>
+
+<ng-template #loadingTemplate>
+  <div class="loading-container">
+    <div class="loading-spinner"></div>
+    <p>Loading your dashboard...</p>
+  </div>
+</ng-template>

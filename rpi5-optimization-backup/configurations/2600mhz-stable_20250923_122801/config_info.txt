@@ -1,0 +1,6 @@
+Configuration Name: 2600mhz-stable
+Description: STABLE: 2600MHz working incredibly at 56.5°C - Safe restore point before 2700MHz attempt
+Created: Tue 23 Sep 12:28:01 CDT 2025
+Hostname: SriRP5
+Kernel: 6.12.47+rpt-rpi-v8
+User: sri

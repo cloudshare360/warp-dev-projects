@@ -1,0 +1,6 @@
+Configuration Name: 2200mhz-stable
+Description: STABLE: 2200MHz working perfectly at 55.4°C - Safe restore point before 2400MHz attempt
+Created: Tue 23 Sep 11:40:38 CDT 2025
+Hostname: SriRP5
+Kernel: 6.12.34+rpt-rpi-v8
+User: sri

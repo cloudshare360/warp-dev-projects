@@ -1,0 +1,552 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Angular Todo Application API",
+    "version": "1.0.0",
+    "description": "A comprehensive REST API for managing todo lists and items with user authentication, built with Node.js, Express.js, and MongoDB.",
+    "contact": {
+      "name": "API Support",
+      "email": "support@todo-api.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api",
+      "description": "Development server"
+    },
+    {
+      "url": "https://api.todo-app.com/api",
+      "description": "Production server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "Enter JWT token in the format 'Bearer {token}'"
+      }
+    },
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the user",
+            "example": "60d0fe4f5311236168a109ca"
+          },
+          "username": {
+            "type": "string",
+            "description": "Unique username",
+            "example": "johndoe"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "User's email address",
+            "example": "john.doe@example.com"
+          },
+          "firstName": {
+            "type": "string",
+            "description": "User's first name",
+            "example": "John"
+          },
+          "lastName": {
+            "type": "string",
+            "description": "User's last name",
+            "example": "Doe"
+          },
+          "fullName": {
+            "type": "string",
+            "description": "User's full name (computed)",
+            "example": "John Doe"
+          },
+          "phone": {
+            "type": "string",
+            "description": "User's phone number",
+            "example": "+1234567890"
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date",
+            "description": "User's date of birth",
+            "example": "1990-01-01"
+          },
+          "avatar": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to user's avatar image",
+            "example": "https://example.com/avatar.jpg"
+          },
+          "isActive": {
+            "type": "boolean",
+            "description": "Whether the user account is active",
+            "example": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Account creation timestamp",
+            "example": "2023-01-01T00:00:00.000Z"
+          },
+          "lastLogin": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last login timestamp",
+            "example": "2023-12-01T12:00:00.000Z"
+          }
+        }
+      },
+      "List": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the list",
+            "example": "60d0fe4f5311236168a109cb"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the todo list",
+            "example": "Work Tasks"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the todo list",
+            "example": "Tasks related to work projects"
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#([0-9a-f]{3}){1,2}$",
+            "description": "Hex color code for the list",
+            "example": "#3498db"
+          },
+          "isPublic": {
+            "type": "boolean",
+            "description": "Whether the list is publicly visible",
+            "example": false
+          },
+          "userId": {
+            "type": "string",
+            "description": "ID of the user who owns this list",
+            "example": "60d0fe4f5311236168a109ca"
+          },
+          "todoCount": {
+            "type": "number",
+            "description": "Total number of todos in this list",
+            "example": 5
+          },
+          "completedTodoCount": {
+            "type": "number",
+            "description": "Number of completed todos in this list",
+            "example": 3
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "List creation timestamp",
+            "example": "2023-01-01T00:00:00.000Z"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last update timestamp",
+            "example": "2023-12-01T12:00:00.000Z"
+          }
+        }
+      },
+      "Todo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the todo",
+            "example": "60d0fe4f5311236168a109cc"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title of the todo item",
+            "example": "Complete project documentation"
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed description of the todo item",
+            "example": "Write comprehensive documentation for the new API endpoints"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["low", "medium", "high"],
+            "description": "Priority level of the todo item",
+            "example": "high"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Due date for the todo item",
+            "example": "2023-12-31T23:59:59.000Z"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Tags associated with the todo item",
+            "example": ["work", "documentation", "urgent"]
+          },
+          "estimatedTime": {
+            "type": "number",
+            "description": "Estimated time to complete in minutes",
+            "example": 120
+          },
+          "isCompleted": {
+            "type": "boolean",
+            "description": "Whether the todo item is completed",
+            "example": false
+          },
+          "completedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Completion timestamp",
+            "example": "2023-12-01T15:30:00.000Z"
+          },
+          "order": {
+            "type": "number",
+            "description": "Order position within the list",
+            "example": 1
+          },
+          "listId": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string",
+                "example": "60d0fe4f5311236168a109cb"
+              },
+              "name": {
+                "type": "string",
+                "example": "Work Tasks"
+              },
+              "color": {
+                "type": "string",
+                "example": "#3498db"
+              }
+            },
+            "description": "Associated list information"
+          },
+          "userId": {
+            "type": "string",
+            "description": "ID of the user who owns this todo",
+            "example": "60d0fe4f5311236168a109ca"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp",
+            "example": "2023-01-01T00:00:00.000Z"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last update timestamp",
+            "example": "2023-12-01T12:00:00.000Z"
+          }
+        }
+      },
+      "ApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful",
+            "example": true
+          },
+          "message": {
+            "type": "string",
+            "description": "Response message",
+            "example": "Operation completed successfully"
+          },
+          "data": {
+            "type": "object",
+            "description": "Response data"
+          }
+        },
+        "required": ["success"]
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": false
+          },
+          "error": {
+            "type": "string",
+            "description": "Error type",
+            "example": "ValidationError"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message",
+            "example": "Invalid input data"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Error timestamp",
+            "example": "2023-12-01T12:00:00.000Z"
+          }
+        },
+        "required": ["success", "error", "message"]
+      },
+      "PaginationInfo": {
+        "type": "object",
+        "properties": {
+          "current": {
+            "type": "integer",
+            "description": "Current page number",
+            "example": 1
+          },
+          "pages": {
+            "type": "integer",
+            "description": "Total number of pages",
+            "example": 5
+          },
+          "total": {
+            "type": "integer",
+            "description": "Total number of items",
+            "example": 50
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Items per page",
+            "example": 10
+          }
+        }
+      },
+      "Statistics": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "description": "Total count",
+            "example": 25
+          },
+          "completed": {
+            "type": "number",
+            "description": "Completed count",
+            "example": 15
+          },
+          "pending": {
+            "type": "number",
+            "description": "Pending count",
+            "example": 10
+          },
+          "highPriority": {
+            "type": "number",
+            "description": "High priority count",
+            "example": 5
+          },
+          "mediumPriority": {
+            "type": "number",
+            "description": "Medium priority count",
+            "example": 12
+          },
+          "lowPriority": {
+            "type": "number",
+            "description": "Low priority count",
+            "example": 8
+          },
+          "overdue": {
+            "type": "number",
+            "description": "Overdue count",
+            "example": 3
+          },
+          "completionPercentage": {
+            "type": "number",
+            "description": "Completion percentage",
+            "example": 60
+          }
+        }
+      }
+    },
+    "responses": {
+      "UnauthorizedError": {
+        "description": "Authentication token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "success": false,
+              "error": "Authentication failed",
+              "message": "Invalid or expired token",
+              "timestamp": "2023-12-01T12:00:00.000Z"
+            }
+          }
+        }
+      },
+      "ValidationError": {
+        "description": "Request validation failed",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "success": false,
+              "error": "Validation error",
+              "message": "Field validation failed",
+              "timestamp": "2023-12-01T12:00:00.000Z"
+            }
+          }
+        }
+      },
+      "NotFoundError": {
+        "description": "Resource not found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "success": false,
+              "error": "Not found",
+              "message": "Resource not found",
+              "timestamp": "2023-12-01T12:00:00.000Z"
+            }
+          }
+        }
+      },
+      "ServerError": {
+        "description": "Internal server error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "success": false,
+              "error": "Internal server error",
+              "message": "Something went wrong on our end",
+              "timestamp": "2023-12-01T12:00:00.000Z"
+            }
+          }
+        }
+      },
+      "RateLimitError": {
+        "description": "Rate limit exceeded",
+        "content": {
+          "application/json": {
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "retryAfter": {
+                      "type": "integer",
+                      "description": "Seconds until retry is allowed",
+                      "example": 900
+                    }
+                  }
+                }
+              ]
+            },
+            "example": {
+              "success": false,
+              "error": "Too many requests",
+              "message": "Rate limit exceeded",
+              "retryAfter": 900,
+              "timestamp": "2023-12-01T12:00:00.000Z"
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "PageParam": {
+        "name": "page",
+        "in": "query",
+        "description": "Page number for pagination",
+        "required": false,
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        }
+      },
+      "LimitParam": {
+        "name": "limit",
+        "in": "query",
+        "description": "Number of items per page",
+        "required": false,
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 10
+        }
+      },
+      "SortParam": {
+        "name": "sort",
+        "in": "query",
+        "description": "Sort order",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "enum": ["asc", "desc"],
+          "default": "desc"
+        }
+      },
+      "SearchParam": {
+        "name": "search",
+        "in": "query",
+        "description": "Search term",
+        "required": false,
+        "schema": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "General",
+      "description": "General API information and health checks"
+    },
+    {
+      "name": "Authentication",
+      "description": "User authentication and authorization endpoints"
+    },
+    {
+      "name": "Users",
+      "description": "User profile and account management endpoints"
+    },
+    {
+      "name": "Lists",
+      "description": "Todo list management endpoints"
+    },
+    {
+      "name": "Todos",
+      "description": "Todo item management endpoints"
+    }
+  ],
+  "paths": {},
+  "externalDocs": {
+    "description": "Find more info about the Angular Todo Application",
+    "url": "https://github.com/example/angular-todo-app"
+  }
+}

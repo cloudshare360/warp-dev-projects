@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "message": "Work experience retrieved successfully",
+  "data": [
+    {
+      "id": "1",
+      "company": "TechGlobal Solutions",
+      "position": "Solution Architect",
+      "location": "San Francisco, CA",
+      "startDate": "2020-01",
+      "endDate": "present",
+      "description": "Leading technical architecture and design for enterprise-level applications",
+      "technologies": ["Angular", "React", "Node.js", "Python", "AWS", "Docker", "Kubernetes"],
+      "achievements": [
+        "Successfully delivered 12 major projects on time and within budget",
+        "Improved team productivity by 30% through implementation of best practices",
+        "Reduced system downtime by 85% through improved monitoring and alerting"
+      ]
+    },
+    {
+      "id": "2", 
+      "company": "InnovateTech Corp",
+      "position": "Senior Full Stack Developer",
+      "location": "New York, NY",
+      "startDate": "2018-03",
+      "endDate": "2019-12",
+      "description": "Developed and maintained multiple web applications using modern frameworks",
+      "technologies": ["React", "Node.js", "MongoDB", "Express", "TypeScript"],
+      "achievements": [
+        "Built 3 production applications serving 100K+ users",
+        "Mentored 5 junior developers",
+        "Implemented CI/CD pipeline reducing deployment time by 60%"
+      ]
+    }
+  ]
+}

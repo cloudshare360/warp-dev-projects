@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://portfolio.com/schemas/profile.json",
+  "title": "Portfolio Profile Schema",
+  "description": "Schema for portfolio profile data validation",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Unique identifier for the profile"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 100,
+      "description": "Full professional name"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 100,
+      "description": "Current job title or preferred title"
+    },
+    "tagline": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "Brief professional tagline"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Professional email address"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^\\+?[1-9]\\d{1,14}$",
+      "description": "Phone number in international format"
+    },
+    "location": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 100,
+      "description": "Current location (City, State/Country)"
+    },
+    "timezone": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Timezone (e.g., PST, EST)"
+    },
+    "availability": {
+      "type": "string",
+      "maxLength": 100,
+      "description": "Current availability status"
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 100,
+      "maxLength": 2000,
+      "description": "Professional summary (2-3 paragraphs)"
+    },
+    "avatar": {
+      "type": "string",
+      "pattern": "^/assets/images/.*\\.(jpg|jpeg|png|webp)$",
+      "description": "Path to profile image"
+    },
+    "resume": {
+      "type": "string",
+      "pattern": "^/assets/documents/.*\\.pdf$",
+      "description": "Path to resume/CV PDF"
+    },
+    "socialLinks": {
+      "type": "object",
+      "properties": {
+        "linkedin": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://linkedin\\.com/in/.*"
+        },
+        "github": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://github\\.com/.*"
+        },
+        "twitter": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://twitter\\.com/.*"
+        },
+        "website": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
+    },
+    "highlights": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 10,
+        "maxLength": 200
+      },
+      "minItems": 3,
+      "maxItems": 10,
+      "description": "Key career highlights"
+    },
+    "workingHours": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "Preferred working hours"
+    },
+    "responseTime": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "Expected response time"
+    },
+    "preferredContactMethod": {
+      "type": "string",
+      "enum": ["email", "phone", "linkedin"],
+      "description": "Preferred method of contact"
+    },
+    "remoteWork": {
+      "type": "boolean",
+      "description": "Open to remote work opportunities"
+    },
+    "relocation": {
+      "type": "boolean",
+      "description": "Open to relocation"
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 20
+      },
+      "uniqueItems": true,
+      "description": "Spoken languages"
+    },
+    "interests": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 50
+      },
+      "uniqueItems": true,
+      "description": "Professional and personal interests"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "title",
+    "email",
+    "location",
+    "summary",
+    "socialLinks",
+    "highlights"
+  ],
+  "additionalProperties": false
+}

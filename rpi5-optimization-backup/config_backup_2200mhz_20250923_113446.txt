@@ -1,0 +1,345 @@
+# For more options and information see
+# http://rptl.io/configtxt
+# Some settings may impact device functionality. See link above for details
+
+# Uncomment some or all of these to enable the optional hardware interfaces
+#dtparam=i2c_arm=on
+#dtparam=i2s=on
+#dtparam=spi=on
+
+# Enable audio (loads snd_bcm2835)
+dtparam=audio=on
+
+# Additional overlays and parameters are documented
+# /boot/firmware/overlays/README
+
+# Automatically load overlays for detected cameras
+camera_auto_detect=1
+
+# Automatically load overlays for detected DSI displays
+display_auto_detect=1
+
+# Automatically load initramfs files, if found
+auto_initramfs=1
+
+# Enable DRM VC4 V3D driver
+dtoverlay=vc4-kms-v3d
+max_framebuffers=2
+
+# Don't have the firmware create an initial video= setting in cmdline.txt.
+# Use the kernel's default instead.
+disable_fw_kms_setup=1
+
+# Run in 64-bit mode
+arm_64bit=1
+
+# Disable compensation for displays with overscan
+disable_overscan=1
+
+# Run as fast as firmware / board allows
+arm_boost=1
+
+[cm4]
+# Enable host mode on the 2711 built-in XHCI USB controller.
+# This line should be removed if the legacy DWC2 controller is required
+# (e.g. for USB device mode) or if USB support is not required.
+otg_mode=1
+
+[cm5]
+dtoverlay=dwc2,dr_mode=host
+
+[all]
+
+# Enable PCIe
+dtparam=pciex1
+
+# PCIe boot configuration - Enable PCIe Gen 1 speed
+dtparam=pciex1_gen=1
+
+# GPU Memory allocation for dual monitors (512MB for 8GB Pi 5)
+# Pi 5 uses CMA instead of gpu_mem
+# gpu_mem=512
+
+# Increase CMA (Contiguous Memory Allocator) for better graphics performance
+cma=256
+
+# Force HDMI output (prevents blank screens)
+hdmi_force_hotplug:0=1
+hdmi_force_hotplug:1=1
+
+# Set HDMI drive strength (helps with display detection)
+config_hdmi_boost:0=7
+config_hdmi_boost:1=7
+
+# Enable both HDMI outputs with 4K support
+hdmi_enable_4kp60:0=1
+hdmi_enable_4kp60:1=1
+
+# === OVERCLOCKING CONFIGURATION ===
+# Safe overclocking settings for Pi 5 with dual monitors
+
+# CPU Overclocking
+
+# GPU Overclocking  
+gpu_freq=700           # GPU core frequency (700 MHz - ~150MHz boost)
+v3d_freq=1100          # V3D graphics frequency (1.1 GHz - 140MHz boost)
+
+# Memory Overclocking
+sdram_freq=3600        # RAM frequency (3600 MHz from stock ~3200)
+
+# Temperature and Power Management
+temp_limit=75          # Thermal limit (default 85°C, conservative 75°C)
+initial_turbo=60       # Boost duration in seconds
+
+# Force performance governor for consistent performance
+force_turbo=0          # Allow dynamic scaling (0=dynamic, 1=always max)
+
+
+# Pi 5 GPU Memory Configuration (replaces gpu_mem)
+dtoverlay=vc4-kms-v3d,cma-512
+
+[pi5]
+kernel=kernel8.img
+
+# RPi5 Performance Optimizations
+# GPU memory split - minimize for more system RAM (default: 76M -> 8M)
+gpu_mem=8
+
+# Disable unnecessary features for performance
+disable_splash=1
+
+# ARM frequency optimization
+
+# Memory frequency optimization
+#arm_freq_min=1500
+
+# Enable hardware acceleration
+dtparam=audio=on
+
+# RPi5 Adaptive CPU Optimization - 2400MHz
+# Generated: Tue 23 Sep 10:53:51 CDT 2025
+# Frequency: 2400MHz, Voltage: +2
+
+# CPU Configuration
+
+# Memory and stability optimization
+sdram_freq=3200
+sdram_over_voltage=2
+
+# GPU optimization (minimal for more system RAM)
+gpu_mem=8
+gpu_freq=500
+
+# Boot optimization
+disable_splash=1
+boot_delay=0
+
+# Thermal management
+temp_limit=75
+
+# Advanced stability settings
+force_turbo=0
+initial_turbo=30
+
+# RPi5 Adaptive CPU Optimization - 2700MHz
+# Generated: Tue 23 Sep 11:09:55 CDT 2025
+# Frequency: 2700MHz, Voltage: +4
+
+# CPU Configuration
+
+# Memory and stability optimization
+sdram_freq=3200
+sdram_over_voltage=2
+
+# GPU optimization (minimal for more system RAM)
+gpu_mem=8
+gpu_freq=500
+
+# Boot optimization
+disable_splash=1
+boot_delay=0
+
+# Thermal management
+temp_limit=75
+
+# Advanced stability settings
+force_turbo=0
+initial_turbo=30
+
+# RPi5 Adaptive CPU Optimization - 2600MHz
+# Generated: Tue 23 Sep 11:11:22 CDT 2025
+# Frequency: 2600MHz, Voltage: +3
+
+# CPU Configuration
+
+# Memory and stability optimization
+sdram_freq=3200
+sdram_over_voltage=2
+
+# GPU optimization (minimal for more system RAM)
+gpu_mem=8
+gpu_freq=500
+
+# Boot optimization
+disable_splash=1
+boot_delay=0
+
+# Thermal management
+temp_limit=75
+
+# Advanced stability settings
+force_turbo=0
+initial_turbo=30
+
+# RPi5 Adaptive CPU Optimization - 2500MHz
+# Generated: Tue 23 Sep 11:12:49 CDT 2025
+# Frequency: 2500MHz, Voltage: +2
+
+# CPU Configuration
+
+# Memory and stability optimization
+sdram_freq=3200
+sdram_over_voltage=2
+
+# GPU optimization (minimal for more system RAM)
+gpu_mem=8
+gpu_freq=500
+
+# Boot optimization
+disable_splash=1
+boot_delay=0
+
+# Thermal management
+temp_limit=75
+
+# Advanced stability settings
+force_turbo=0
+initial_turbo=30
+
+# RPi5 Adaptive CPU Optimization - 2400MHz
+# Generated: Tue 23 Sep 11:14:18 CDT 2025
+# Frequency: 2400MHz, Voltage: +2
+
+# CPU Configuration
+
+# Memory and stability optimization
+sdram_freq=3200
+sdram_over_voltage=2
+
+# GPU optimization (minimal for more system RAM)
+gpu_mem=8
+gpu_freq=500
+
+# Boot optimization
+disable_splash=1
+boot_delay=0
+
+# Thermal management
+temp_limit=75
+
+# Advanced stability settings
+force_turbo=0
+initial_turbo=30
+
+# RPi5 Adaptive CPU Optimization - 2300MHz
+# Generated: Tue 23 Sep 11:15:46 CDT 2025
+# Frequency: 2300MHz, Voltage: +1
+
+# CPU Configuration
+
+# Memory and stability optimization
+sdram_freq=3200
+sdram_over_voltage=2
+
+# GPU optimization (minimal for more system RAM)
+gpu_mem=8
+gpu_freq=500
+
+# Boot optimization
+disable_splash=1
+boot_delay=0
+
+# Thermal management
+temp_limit=75
+
+# Advanced stability settings
+force_turbo=0
+initial_turbo=30
+
+# RPi5 Adaptive CPU Optimization - 2200MHz
+# Generated: Tue 23 Sep 11:17:14 CDT 2025
+# Frequency: 2200MHz, Voltage: +1
+
+# CPU Configuration
+
+# Memory and stability optimization
+sdram_freq=3200
+sdram_over_voltage=2
+
+# GPU optimization (minimal for more system RAM)
+gpu_mem=8
+gpu_freq=500
+
+# Boot optimization
+disable_splash=1
+boot_delay=0
+
+# Thermal management
+temp_limit=75
+
+# Advanced stability settings
+force_turbo=0
+initial_turbo=30
+
+# RPi5 Adaptive CPU Optimization - 2100MHz
+# Generated: Tue 23 Sep 11:18:42 CDT 2025
+# Frequency: 2100MHz, Voltage: +0
+
+# CPU Configuration
+
+# Memory and stability optimization
+sdram_freq=3200
+sdram_over_voltage=2
+
+# GPU optimization (minimal for more system RAM)
+gpu_mem=8
+gpu_freq=500
+
+# Boot optimization
+disable_splash=1
+boot_delay=0
+
+# Thermal management
+temp_limit=75
+
+# Advanced stability settings
+force_turbo=0
+initial_turbo=30
+
+# RPi5 Adaptive CPU Optimization - 2000MHz
+# Generated: Tue 23 Sep 11:20:11 CDT 2025
+# Frequency: 2000MHz, Voltage: +0
+
+# CPU Configuration
+arm_freq=2000
+over_voltage=0
+
+# Memory and stability optimization
+over_voltage_sdram=2
+sdram_freq=3200
+sdram_over_voltage=2
+
+# GPU optimization (minimal for more system RAM)
+gpu_mem=8
+gpu_freq=500
+
+# Boot optimization
+disable_splash=1
+boot_delay=0
+
+# Thermal management
+temp_limit=75
+
+# Advanced stability settings
+force_turbo=0
+initial_turbo=30

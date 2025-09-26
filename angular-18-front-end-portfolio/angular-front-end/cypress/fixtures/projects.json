@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Projects retrieved successfully",
+  "data": [
+    {
+      "id": "1",
+      "title": "E-Commerce Platform",
+      "description": "Full-stack e-commerce solution with React frontend and Node.js backend",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
+      "status": "completed",
+      "featured": true,
+      "startDate": "2023-01",
+      "endDate": "2023-06",
+      "githubUrl": "https://github.com/example/ecommerce",
+      "liveUrl": "https://ecommerce-demo.com",
+      "imageUrl": "/assets/projects/ecommerce.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Task Management System", 
+      "description": "Collaborative task management application with real-time updates",
+      "technologies": ["Angular", "Express.js", "Socket.io", "PostgreSQL"],
+      "status": "completed",
+      "featured": true,
+      "startDate": "2022-09",
+      "endDate": "2023-01", 
+      "githubUrl": "https://github.com/example/taskmanager",
+      "liveUrl": "https://taskmanager-demo.com",
+      "imageUrl": "/assets/projects/taskmanager.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Portfolio Website",
+      "description": "Personal portfolio website built with Angular 18 and modern design",
+      "technologies": ["Angular 18", "TypeScript", "Material UI", "Cypress"],
+      "status": "in-progress",
+      "featured": false,
+      "startDate": "2024-09",
+      "endDate": null,
+      "githubUrl": "https://github.com/example/portfolio",
+      "liveUrl": null,
+      "imageUrl": "/assets/projects/portfolio.jpg"
+    }
+  ]
+}

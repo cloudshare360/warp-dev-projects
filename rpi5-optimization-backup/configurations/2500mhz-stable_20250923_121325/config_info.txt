@@ -1,0 +1,6 @@
+Configuration Name: 2500mhz-stable
+Description: STABLE: 2500MHz working excellently at 57.1°C - Safe restore point before next overclock attempt
+Created: Tue 23 Sep 12:13:25 CDT 2025
+Hostname: SriRP5
+Kernel: 6.12.47+rpt-rpi-v8
+User: sri

@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "message": "Skills retrieved successfully",
+  "data": [
+    {
+      "id": "1",
+      "category": "Frontend Technologies",
+      "skills": [
+        {"name": "Angular", "proficiency": 95, "yearsOfExperience": 5},
+        {"name": "React", "proficiency": 90, "yearsOfExperience": 4},
+        {"name": "TypeScript", "proficiency": 92, "yearsOfExperience": 4},
+        {"name": "JavaScript", "proficiency": 95, "yearsOfExperience": 7}
+      ]
+    },
+    {
+      "id": "2", 
+      "category": "Backend Technologies",
+      "skills": [
+        {"name": "Node.js", "proficiency": 88, "yearsOfExperience": 5},
+        {"name": "Python", "proficiency": 85, "yearsOfExperience": 3},
+        {"name": "Express.js", "proficiency": 90, "yearsOfExperience": 4},
+        {"name": "REST APIs", "proficiency": 95, "yearsOfExperience": 6}
+      ]
+    },
+    {
+      "id": "3",
+      "category": "Cloud & DevOps", 
+      "skills": [
+        {"name": "AWS", "proficiency": 80, "yearsOfExperience": 3},
+        {"name": "Docker", "proficiency": 75, "yearsOfExperience": 2},
+        {"name": "Kubernetes", "proficiency": 70, "yearsOfExperience": 2},
+        {"name": "CI/CD", "proficiency": 85, "yearsOfExperience": 4}
+      ]
+    }
+  ]
+}

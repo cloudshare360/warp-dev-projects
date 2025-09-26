@@ -1,0 +1,57 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>Login</h2>
+    <form (ngSubmit)="onSubmit()" class="login-form">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          [(ngModel)]="loginData.username"
+          name="username"
+          required
+          class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          [(ngModel)]="loginData.password"
+          name="password"
+          required
+          class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="roleType">Role:</label>
+        <select
+          id="roleType"
+          [(ngModel)]="loginData.roleType"
+          name="roleType"
+          class="form-control">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+
+    <div class="form-links">
+      <p><a routerLink="/register">New user? Sign up here</a></p>
+      <p><a routerLink="/forgot-password">Forgot Password?</a></p>
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,905 @@
+{
+  "profile": {
+    "id": 1,
+    "name": "Sri Ramanujam",
+    "title": "Solution Architect & Technical Leader",
+    "tagline": "Transforming Business Through Innovative Technology Solutions",
+    "email": "sri.ramanujam@example.com",
+    "phone": "+1-555-123-4567",
+    "location": "San Francisco, CA, USA",
+    "timezone": "PST",
+    "availability": "Available for new opportunities",
+    "summary": "Accomplished Solution Architect with 15+ years of experience in designing and implementing scalable enterprise solutions. Proven track record of leading cross-functional teams, architecting cloud-native applications, and driving digital transformation initiatives. Expertise spans multiple roles including Developer, TechLead, Application Architect, and Solution Architect with deep knowledge of modern technologies and architectural patterns.",
+    "avatar": "/assets/images/profile/sri-profile.jpg",
+    "resume": "/assets/documents/sri-ramanujam-resume.pdf",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/sri-ramanujam",
+      "github": "https://github.com/sri-ramanujam",
+      "twitter": "https://twitter.com/sri_architect",
+      "website": "https://sri-architect.com"
+    },
+    "highlights": [
+      "15+ years of software development and architecture experience",
+      "Led teams of 20+ developers across multiple enterprise projects",
+      "Architected solutions serving 1M+ users with 99.9% uptime",
+      "Successfully delivered 50+ projects worth $10M+ in business value",
+      "Expert in cloud architecture, microservices, and DevOps practices"
+    ],
+    "workingHours": "9 AM - 6 PM PST",
+    "responseTime": "Within 24 hours",
+    "preferredContactMethod": "email",
+    "remoteWork": true,
+    "relocation": false,
+    "languages": ["English", "Hindi", "Tamil"],
+    "interests": ["Technology Innovation", "Team Mentoring", "Open Source", "Cloud Architecture", "AI/ML"]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "company": "TechGlobal Solutions",
+      "companyUrl": "https://techglobal.com",
+      "companyLogo": "/assets/images/companies/techglobal-logo.png",
+      "position": "Solution Architect",
+      "location": "San Francisco, CA",
+      "startDate": "2020-01",
+      "endDate": "present",
+      "duration": "4+ years",
+      "type": "Full-time",
+      "remote": true,
+      "description": "Lead architectural decisions for enterprise applications serving Fortune 500 clients. Design and implement scalable microservices architectures, mentor development teams, and drive technical excellence across multiple product lines.",
+      "responsibilities": [
+        "Designed and implemented microservices architecture for 5+ enterprise applications",
+        "Led cross-functional teams of 15+ developers, DevOps engineers, and QA specialists",
+        "Established architectural standards and best practices across the organization",
+        "Reduced system latency by 40% through performance optimization and caching strategies",
+        "Implemented CI/CD pipelines reducing deployment time from hours to minutes"
+      ],
+      "achievements": [
+        "Successfully delivered 12 major projects on time with 98% client satisfaction",
+        "Improved team productivity by 30% through mentoring and process optimization",
+        "Reduced infrastructure costs by 25% through cloud optimization strategies",
+        "Led digital transformation initiative resulting in $2M annual cost savings",
+        "Established center of excellence for cloud-native development practices"
+      ],
+      "technologies": [
+        "Angular", "React", "Node.js", "Python", "Java", "AWS", "Azure", "Docker", "Kubernetes", "Terraform", "MongoDB", "PostgreSQL", "Redis", "GraphQL", "REST APIs"
+      ],
+      "projects": [
+        {
+          "name": "E-commerce Platform Modernization",
+          "description": "Led the complete architectural redesign of legacy e-commerce platform",
+          "impact": "Increased performance by 50% and reduced maintenance costs by 40%",
+          "technologies": ["Angular", "Node.js", "AWS", "Docker"]
+        },
+        {
+          "name": "Multi-Tenant SaaS Platform",
+          "description": "Architected scalable multi-tenant platform serving 100,000+ users",
+          "impact": "Enabled company to scale from 10K to 100K users without infrastructure changes",
+          "technologies": ["React", "Python", "Kubernetes", "PostgreSQL"]
+        }
+      ],
+      "teamSize": 15,
+      "budget": "$5M+"
+    },
+    {
+      "id": 2,
+      "company": "InnovateIT Corp",
+      "companyUrl": "https://innovateit.com",
+      "companyLogo": "/assets/images/companies/innovateit-logo.png",
+      "position": "Application Architect",
+      "location": "Seattle, WA",
+      "startDate": "2017-06",
+      "endDate": "2019-12",
+      "duration": "2.5 years",
+      "type": "Full-time",
+      "remote": false,
+      "description": "Responsible for application architecture design, technology selection, and technical leadership for multiple product teams. Focused on modernizing legacy systems and implementing cloud-first strategies.",
+      "responsibilities": [
+        "Architected 8+ mission-critical applications using modern technology stacks",
+        "Collaborated with product managers to translate business requirements into technical solutions",
+        "Established coding standards and architectural patterns for development teams",
+        "Conducted technical reviews and provided mentorship to senior developers",
+        "Led migration of legacy applications to cloud-native architectures"
+      ],
+      "achievements": [
+        "Successfully migrated 6 legacy applications to AWS with zero downtime",
+        "Reduced application response time by 60% through performance optimization",
+        "Implemented automated testing strategies increasing code coverage to 85%",
+        "Led team of 10 developers in delivering critical product features",
+        "Saved company $500K annually by optimizing cloud resource utilization"
+      ],
+      "technologies": [
+        "Java", "Spring Boot", "Angular", "TypeScript", "AWS", "Lambda", "DynamoDB", "ElasticSearch", "Jenkins", "Git", "Maven", "JUnit"
+      ],
+      "projects": [
+        {
+          "name": "Customer Analytics Platform",
+          "description": "Built real-time analytics platform processing 1M+ events per day",
+          "impact": "Enabled data-driven decision making across all business units",
+          "technologies": ["Java", "AWS Lambda", "DynamoDB", "ElasticSearch"]
+        }
+      ],
+      "teamSize": 10,
+      "budget": "$2M"
+    },
+    {
+      "id": 3,
+      "company": "Digital Dynamics",
+      "companyUrl": "https://digitaldynamics.com",
+      "companyLogo": "/assets/images/companies/digitaldynamics-logo.png",
+      "position": "Technical Lead",
+      "location": "Austin, TX",
+      "startDate": "2014-03",
+      "endDate": "2017-05",
+      "duration": "3.2 years",
+      "type": "Full-time",
+      "remote": false,
+      "description": "Led development teams in building scalable web applications and API services. Responsible for technical decision making, code quality, and mentoring junior developers.",
+      "responsibilities": [
+        "Led development teams of 8+ engineers in agile development processes",
+        "Designed and implemented RESTful APIs serving 500K+ daily requests",
+        "Established code review processes and quality assurance standards",
+        "Mentored junior developers and conducted technical interviews",
+        "Collaborated with UX/UI teams to implement responsive web applications"
+      ],
+      "achievements": [
+        "Delivered 15+ web applications with 99.5% uptime",
+        "Reduced bug rates by 45% through improved testing practices",
+        "Implemented automated deployment pipeline reducing release time by 70%",
+        "Grew team from 3 to 12 developers through successful hiring and retention",
+        "Led adoption of modern JavaScript frameworks increasing development efficiency"
+      ],
+      "technologies": [
+        "JavaScript", "Node.js", "Express.js", "MongoDB", "MySQL", "jQuery", "Bootstrap", "Git", "Jenkins", "Linux", "Nginx"
+      ],
+      "projects": [
+        {
+          "name": "Content Management System",
+          "description": "Built enterprise-grade CMS platform for multiple client websites",
+          "impact": "Enabled non-technical users to manage content reducing support costs by 30%",
+          "technologies": ["Node.js", "MongoDB", "jQuery", "Bootstrap"]
+        }
+      ],
+      "teamSize": 8,
+      "budget": "$1.5M"
+    },
+    {
+      "id": 4,
+      "company": "StartupTech Inc",
+      "companyUrl": "https://startuptech.com",
+      "companyLogo": "/assets/images/companies/startuptech-logo.png",
+      "position": "Senior Developer",
+      "location": "San Jose, CA",
+      "startDate": "2011-08",
+      "endDate": "2014-02",
+      "duration": "2.5 years",
+      "type": "Full-time",
+      "remote": false,
+      "description": "Full-stack developer responsible for building web applications from conception to deployment. Worked in fast-paced startup environment with direct client interaction and rapid iteration cycles.",
+      "responsibilities": [
+        "Developed full-stack web applications using modern JavaScript frameworks",
+        "Collaborated directly with clients to gather requirements and provide solutions",
+        "Implemented responsive designs and cross-browser compatibility",
+        "Optimized application performance and database queries",
+        "Participated in agile development processes and sprint planning"
+      ],
+      "achievements": [
+        "Built and deployed 20+ client websites and web applications",
+        "Achieved 95% client satisfaction rating through quality delivery",
+        "Reduced page load times by 50% through optimization techniques",
+        "Implemented automated testing reducing manual testing time by 60%",
+        "Contributed to company growth from 5 to 25 employees"
+      ],
+      "technologies": [
+        "PHP", "JavaScript", "MySQL", "HTML5", "CSS3", "jQuery", "WordPress", "Apache", "Linux"
+      ],
+      "projects": [
+        {
+          "name": "E-learning Platform",
+          "description": "Developed comprehensive online learning platform for educational institutions",
+          "impact": "Served 10,000+ students with interactive learning modules",
+          "technologies": ["PHP", "MySQL", "JavaScript", "HTML5"]
+        }
+      ],
+      "teamSize": 5,
+      "budget": "$500K"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "category": "Programming Languages",
+      "icon": "code",
+      "skills": [
+        {
+          "id": 1,
+          "name": "TypeScript",
+          "level": 5,
+          "yearsOfExperience": 8,
+          "lastUsed": "2024-09",
+          "certified": false,
+          "projects": 25,
+          "endorsements": 45
+        },
+        {
+          "id": 2,
+          "name": "JavaScript",
+          "level": 5,
+          "yearsOfExperience": 12,
+          "lastUsed": "2024-09",
+          "certified": false,
+          "projects": 40,
+          "endorsements": 60
+        },
+        {
+          "id": 3,
+          "name": "Java",
+          "level": 4,
+          "yearsOfExperience": 10,
+          "lastUsed": "2024-08",
+          "certified": true,
+          "projects": 30,
+          "endorsements": 35
+        },
+        {
+          "id": 4,
+          "name": "Python",
+          "level": 4,
+          "yearsOfExperience": 6,
+          "lastUsed": "2024-09",
+          "certified": false,
+          "projects": 18,
+          "endorsements": 28
+        },
+        {
+          "id": 5,
+          "name": "C#",
+          "level": 3,
+          "yearsOfExperience": 4,
+          "lastUsed": "2024-06",
+          "certified": false,
+          "projects": 12,
+          "endorsements": 15
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Frontend Frameworks",
+      "icon": "layers",
+      "skills": [
+        {
+          "id": 6,
+          "name": "Angular",
+          "level": 5,
+          "yearsOfExperience": 8,
+          "lastUsed": "2024-09",
+          "certified": false,
+          "projects": 28,
+          "endorsements": 42
+        },
+        {
+          "id": 7,
+          "name": "React",
+          "level": 4,
+          "yearsOfExperience": 5,
+          "lastUsed": "2024-08",
+          "certified": false,
+          "projects": 20,
+          "endorsements": 30
+        },
+        {
+          "id": 8,
+          "name": "Vue.js",
+          "level": 3,
+          "yearsOfExperience": 3,
+          "lastUsed": "2024-05",
+          "certified": false,
+          "projects": 8,
+          "endorsements": 12
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Backend Technologies",
+      "icon": "server",
+      "skills": [
+        {
+          "id": 9,
+          "name": "Node.js",
+          "level": 5,
+          "yearsOfExperience": 8,
+          "lastUsed": "2024-09",
+          "certified": false,
+          "projects": 30,
+          "endorsements": 40
+        },
+        {
+          "id": 10,
+          "name": "Express.js",
+          "level": 5,
+          "yearsOfExperience": 7,
+          "lastUsed": "2024-09",
+          "certified": false,
+          "projects": 25,
+          "endorsements": 35
+        },
+        {
+          "id": 11,
+          "name": "Spring Boot",
+          "level": 4,
+          "yearsOfExperience": 6,
+          "lastUsed": "2024-07",
+          "certified": true,
+          "projects": 20,
+          "endorsements": 25
+        },
+        {
+          "id": 12,
+          "name": "Django",
+          "level": 3,
+          "yearsOfExperience": 4,
+          "lastUsed": "2024-06",
+          "certified": false,
+          "projects": 10,
+          "endorsements": 15
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Cloud Platforms",
+      "icon": "cloud",
+      "skills": [
+        {
+          "id": 13,
+          "name": "AWS",
+          "level": 5,
+          "yearsOfExperience": 8,
+          "lastUsed": "2024-09",
+          "certified": true,
+          "projects": 35,
+          "endorsements": 50
+        },
+        {
+          "id": 14,
+          "name": "Azure",
+          "level": 4,
+          "yearsOfExperience": 5,
+          "lastUsed": "2024-08",
+          "certified": true,
+          "projects": 20,
+          "endorsements": 30
+        },
+        {
+          "id": 15,
+          "name": "Google Cloud",
+          "level": 3,
+          "yearsOfExperience": 3,
+          "lastUsed": "2024-07",
+          "certified": false,
+          "projects": 8,
+          "endorsements": 12
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Architecture & Design",
+      "icon": "blueprint",
+      "skills": [
+        {
+          "id": 16,
+          "name": "Microservices",
+          "level": 5,
+          "yearsOfExperience": 6,
+          "lastUsed": "2024-09",
+          "certified": false,
+          "projects": 20,
+          "endorsements": 35
+        },
+        {
+          "id": 17,
+          "name": "Event-Driven Architecture",
+          "level": 4,
+          "yearsOfExperience": 5,
+          "lastUsed": "2024-08",
+          "certified": false,
+          "projects": 15,
+          "endorsements": 25
+        },
+        {
+          "id": 18,
+          "name": "Domain-Driven Design",
+          "level": 4,
+          "yearsOfExperience": 4,
+          "lastUsed": "2024-09",
+          "certified": false,
+          "projects": 12,
+          "endorsements": 20
+        },
+        {
+          "id": 19,
+          "name": "API Design",
+          "level": 5,
+          "yearsOfExperience": 10,
+          "lastUsed": "2024-09",
+          "certified": false,
+          "projects": 40,
+          "endorsements": 55
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "DevOps & Tools",
+      "icon": "settings",
+      "skills": [
+        {
+          "id": 20,
+          "name": "Docker",
+          "level": 5,
+          "yearsOfExperience": 6,
+          "lastUsed": "2024-09",
+          "certified": false,
+          "projects": 30,
+          "endorsements": 40
+        },
+        {
+          "id": 21,
+          "name": "Kubernetes",
+          "level": 4,
+          "yearsOfExperience": 4,
+          "lastUsed": "2024-09",
+          "certified": true,
+          "projects": 18,
+          "endorsements": 28
+        },
+        {
+          "id": 22,
+          "name": "Terraform",
+          "level": 4,
+          "yearsOfExperience": 3,
+          "lastUsed": "2024-08",
+          "certified": false,
+          "projects": 12,
+          "endorsements": 20
+        },
+        {
+          "id": 23,
+          "name": "Jenkins",
+          "level": 4,
+          "yearsOfExperience": 7,
+          "lastUsed": "2024-07",
+          "certified": false,
+          "projects": 25,
+          "endorsements": 30
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "Leadership & Management",
+      "icon": "users",
+      "skills": [
+        {
+          "id": 24,
+          "name": "Team Leadership",
+          "level": 5,
+          "yearsOfExperience": 8,
+          "lastUsed": "2024-09",
+          "certified": false,
+          "projects": 15,
+          "endorsements": 45
+        },
+        {
+          "id": 25,
+          "name": "Project Management",
+          "level": 4,
+          "yearsOfExperience": 10,
+          "lastUsed": "2024-09",
+          "certified": true,
+          "projects": 25,
+          "endorsements": 35
+        },
+        {
+          "id": 26,
+          "name": "Agile/Scrum",
+          "level": 5,
+          "yearsOfExperience": 12,
+          "lastUsed": "2024-09",
+          "certified": true,
+          "projects": 35,
+          "endorsements": 50
+        },
+        {
+          "id": 27,
+          "name": "Mentoring",
+          "level": 5,
+          "yearsOfExperience": 8,
+          "lastUsed": "2024-09",
+          "certified": false,
+          "projects": 20,
+          "endorsements": 40
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Enterprise E-commerce Platform",
+      "shortDescription": "Scalable multi-tenant e-commerce solution serving Fortune 500 clients",
+      "fullDescription": "Comprehensive e-commerce platform built with modern microservices architecture, serving multiple Fortune 500 clients with high availability and scalability requirements. The platform handles millions of transactions daily with advanced features including real-time inventory management, personalized recommendations, and integrated payment processing.",
+      "category": "Web Application",
+      "type": "Professional",
+      "status": "Completed",
+      "featured": true,
+      "startDate": "2023-01",
+      "endDate": "2024-03",
+      "duration": "15 months",
+      "teamSize": 12,
+      "role": "Solution Architect",
+      "client": "Fortune 500 Retail Company",
+      "industry": "Retail",
+      "budget": "$2.5M",
+      "technologies": [
+        "Angular 17", "Node.js", "TypeScript", "PostgreSQL", "Redis", "AWS", "Docker", "Kubernetes", "Terraform", "GraphQL"
+      ],
+      "methodologies": ["Agile", "Scrum", "DevOps", "TDD"],
+      "highlights": [
+        "Increased sales conversion by 35% through performance optimization",
+        "Reduced page load time by 60% using advanced caching strategies",
+        "Handled 10x traffic increase during peak seasons with auto-scaling",
+        "Achieved 99.9% uptime with zero-downtime deployments",
+        "Improved user engagement by 45% with personalized recommendations"
+      ],
+      "challenges": [
+        "Integrating with legacy ERP systems and third-party services",
+        "Ensuring PCI DSS compliance for payment processing",
+        "Managing high traffic loads during flash sales and holiday seasons",
+        "Implementing real-time inventory synchronization across multiple warehouses"
+      ],
+      "solutions": [
+        "Implemented API gateway pattern with circuit breakers for resilience",
+        "Used event-driven architecture with message queues for loose coupling",
+        "Implemented advanced caching strategies with Redis and CDN",
+        "Built comprehensive monitoring and alerting system with Prometheus"
+      ],
+      "links": {
+        "live": "https://demo-ecommerce.techglobal.com",
+        "documentation": "https://docs.techglobal.com/ecommerce",
+        "case-study": "https://techglobal.com/case-studies/ecommerce"
+      },
+      "images": [
+        "/assets/images/projects/ecommerce/main-dashboard.jpg",
+        "/assets/images/projects/ecommerce/product-catalog.jpg",
+        "/assets/images/projects/ecommerce/checkout-flow.jpg",
+        "/assets/images/projects/ecommerce/admin-panel.jpg"
+      ],
+      "metrics": {
+        "users": "500,000+",
+        "transactions": "$50M+",
+        "uptime": "99.9%",
+        "performance": "< 2s load time",
+        "scalability": "Auto-scales to 100+ instances"
+      },
+      "testimonial": {
+        "text": "Sri's architectural vision and technical leadership transformed our e-commerce capabilities. The platform's performance and scalability exceeded all expectations.",
+        "author": "John Smith",
+        "position": "CTO",
+        "company": "Fortune 500 Retail Company"
+      },
+      "awards": ["Best Architecture Design 2024", "Innovation Excellence Award"],
+      "impact": "The platform enabled the client to expand into new markets and increase revenue by 40% within the first year."
+    },
+    {
+      "id": 2,
+      "name": "Multi-Tenant SaaS Analytics Platform",
+      "shortDescription": "Real-time analytics platform processing billions of events for enterprise clients",
+      "fullDescription": "Advanced analytics platform designed to handle massive scale data processing and real-time visualization for multiple enterprise clients. The platform provides comprehensive business intelligence, predictive analytics, and customizable dashboards with white-label capabilities.",
+      "category": "Data Platform",
+      "type": "Professional",
+      "status": "Completed",
+      "featured": true,
+      "startDate": "2022-06",
+      "endDate": "2023-12",
+      "duration": "18 months",
+      "teamSize": 15,
+      "role": "Solution Architect",
+      "client": "Multiple Enterprise Clients",
+      "industry": "Technology",
+      "budget": "$3M",
+      "technologies": [
+        "React", "Python", "Apache Kafka", "ClickHouse", "Elasticsearch", "AWS", "Kubernetes", "Apache Spark", "Grafana"
+      ],
+      "methodologies": ["Agile", "DevOps", "Data-Driven Development"],
+      "highlights": [
+        "Processes 10 billion events per day with sub-second latency",
+        "Serves 100,000+ concurrent users across multiple tenants",
+        "Reduced data processing costs by 50% through optimization",
+        "Achieved 99.95% uptime with advanced monitoring and alerting",
+        "Enabled clients to make data-driven decisions in real-time"
+      ],
+      "challenges": [
+        "Handling massive data volumes with low latency requirements",
+        "Ensuring data isolation and security in multi-tenant environment",
+        "Providing real-time analytics with complex aggregations",
+        "Maintaining performance consistency across different tenant sizes"
+      ],
+      "solutions": [
+        "Implemented stream processing with Apache Kafka and Spark",
+        "Used time-series database (ClickHouse) for optimal analytics performance",
+        "Built tenant isolation using namespace-based segregation",
+        "Implemented adaptive resource allocation based on tenant usage"
+      ],
+      "links": {
+        "live": "https://analytics.saasplatform.com",
+        "documentation": "https://docs.saasplatform.com/analytics"
+      },
+      "images": [
+        "/assets/images/projects/analytics/dashboard-overview.jpg",
+        "/assets/images/projects/analytics/real-time-metrics.jpg",
+        "/assets/images/projects/analytics/custom-reports.jpg"
+      ],
+      "metrics": {
+        "events": "10B+ daily",
+        "users": "100,000+ concurrent",
+        "latency": "< 100ms",
+        "uptime": "99.95%",
+        "tenants": "500+"
+      },
+      "testimonial": {
+        "text": "The analytics platform Sri designed revolutionized how we understand our customer behavior. The insights generated have directly contributed to our 25% revenue growth.",
+        "author": "Sarah Johnson",
+        "position": "VP of Product",
+        "company": "TechStartup Inc"
+      },
+      "impact": "Enabled multiple clients to increase their revenue by an average of 25% through data-driven insights."
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "Stanford University",
+      "institutionUrl": "https://stanford.edu",
+      "logo": "/assets/images/education/stanford-logo.png",
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "specialization": "Distributed Systems",
+      "graduationYear": 2009,
+      "startYear": 2007,
+      "gpa": "3.9/4.0",
+      "honors": ["Magna Cum Laude", "Dean's List", "Outstanding Graduate Student"],
+      "relevantCourses": [
+        "Advanced Software Engineering",
+        "Distributed Systems Architecture",
+        "Database Systems Design",
+        "Machine Learning",
+        "Algorithm Design and Analysis",
+        "Computer Networks"
+      ],
+      "thesis": {
+        "title": "Scalable Microservices Architecture for Cloud-Native Applications",
+        "advisor": "Dr. Jennifer Williams",
+        "abstract": "Research on optimal patterns for microservices deployment and management in cloud environments"
+      },
+      "location": "Palo Alto, CA",
+      "activities": ["Computer Science Graduate Association", "Research Assistant", "Teaching Assistant"]
+    },
+    {
+      "id": 2,
+      "institution": "University of California, Berkeley",
+      "institutionUrl": "https://berkeley.edu",
+      "logo": "/assets/images/education/berkeley-logo.png",
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "specialization": "Software Engineering",
+      "graduationYear": 2007,
+      "startYear": 2003,
+      "gpa": "3.8/4.0",
+      "honors": ["Summa Cum Laude", "Dean's List (8 semesters)", "Computer Science Academic Excellence Award"],
+      "relevantCourses": [
+        "Data Structures and Algorithms",
+        "Software Engineering Principles",
+        "Operating Systems",
+        "Computer Architecture",
+        "Database Management Systems",
+        "Web Development"
+      ],
+      "location": "Berkeley, CA",
+      "activities": ["ACM Student Chapter President", "Programming Competition Team", "Peer Tutor"]
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "name": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "level": "Professional",
+      "issueDate": "2023-06",
+      "expiryDate": "2026-06",
+      "credentialId": "AWS-PSA-789123456",
+      "verificationUrl": "https://aws.amazon.com/verification/789123456",
+      "badge": "/assets/images/badges/aws-solutions-architect-professional.png",
+      "skills": ["Cloud Architecture", "AWS Services", "Security", "Cost Optimization"],
+      "preparationTime": "6 months",
+      "active": true,
+      "description": "Professional-level certification demonstrating advanced skills in designing distributed systems on AWS."
+    },
+    {
+      "id": 2,
+      "name": "Certified Kubernetes Administrator",
+      "issuer": "Cloud Native Computing Foundation",
+      "level": "Professional",
+      "issueDate": "2023-03",
+      "expiryDate": "2026-03",
+      "credentialId": "CKA-456789123",
+      "verificationUrl": "https://cncf.io/certification/verify/456789123",
+      "badge": "/assets/images/badges/cka.png",
+      "skills": ["Kubernetes", "Container Orchestration", "DevOps", "Cloud Native"],
+      "preparationTime": "4 months",
+      "active": true,
+      "description": "Hands-on certification validating skills in Kubernetes administration and cluster management."
+    },
+    {
+      "id": 3,
+      "name": "Microsoft Azure Solutions Architect Expert",
+      "issuer": "Microsoft",
+      "level": "Expert",
+      "issueDate": "2022-11",
+      "expiryDate": "2024-11",
+      "credentialId": "AZ-305-987654321",
+      "verificationUrl": "https://microsoft.com/verification/987654321",
+      "badge": "/assets/images/badges/azure-solutions-architect.png",
+      "skills": ["Azure Services", "Cloud Architecture", "Hybrid Solutions"],
+      "preparationTime": "5 months",
+      "active": true,
+      "description": "Expert-level certification in designing Microsoft Azure solutions and architectures."
+    },
+    {
+      "id": 4,
+      "name": "Certified Scrum Master",
+      "issuer": "Scrum Alliance",
+      "level": "Professional",
+      "issueDate": "2021-08",
+      "expiryDate": "2025-08",
+      "credentialId": "CSM-123456789",
+      "verificationUrl": "https://scrumalliance.org/verify/123456789",
+      "badge": "/assets/images/badges/csm.png",
+      "skills": ["Agile Methodology", "Scrum Framework", "Team Leadership"],
+      "preparationTime": "3 months",
+      "active": true,
+      "description": "Professional certification in Scrum methodology and agile project management."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "text": "Sri is an exceptional Solution Architect who combines deep technical knowledge with outstanding leadership skills. His ability to translate complex business requirements into elegant technical solutions is remarkable. Under his guidance, our team delivered projects that exceeded expectations and set new standards for excellence.",
+      "author": "Michael Chen",
+      "position": "VP of Engineering",
+      "company": "TechGlobal Solutions",
+      "relationship": "Direct Manager",
+      "date": "2024-08-15",
+      "projectContext": "E-commerce Platform Modernization",
+      "skills": ["Solution Architecture", "Technical Leadership", "Project Management"],
+      "rating": 5,
+      "avatar": "/assets/images/testimonials/michael-chen.jpg",
+      "linkedinUrl": "https://linkedin.com/in/michael-chen-vp"
+    },
+    {
+      "id": 2,
+      "text": "Working with Sri was transformational for our organization. His architectural vision and hands-on approach helped us scale from handling thousands to millions of users seamlessly. He's not just technically brilliant but also an excellent mentor who helped our entire team grow professionally.",
+      "author": "Sarah Williams",
+      "position": "CTO",
+      "company": "InnovateIT Corp",
+      "relationship": "Colleague",
+      "date": "2024-07-20",
+      "projectContext": "Multi-Tenant SaaS Platform",
+      "skills": ["Scalability", "Mentoring", "System Design"],
+      "rating": 5,
+      "avatar": "/assets/images/testimonials/sarah-williams.jpg",
+      "linkedinUrl": "https://linkedin.com/in/sarah-williams-cto"
+    },
+    {
+      "id": 3,
+      "text": "Sri's contribution to our digital transformation cannot be overstated. His deep understanding of cloud technologies and modern architectures helped us modernize our entire technology stack. The results speak for themselves - 40% improvement in performance and 60% reduction in infrastructure costs.",
+      "author": "David Rodriguez",
+      "position": "Director of Technology",
+      "company": "Fortune 500 Retail",
+      "relationship": "Client",
+      "date": "2024-06-10",
+      "projectContext": "Enterprise E-commerce Platform",
+      "skills": ["Digital Transformation", "Cloud Architecture", "Cost Optimization"],
+      "rating": 5,
+      "avatar": "/assets/images/testimonials/david-rodriguez.jpg"
+    },
+    {
+      "id": 4,
+      "text": "As a team lead under Sri's guidance, I witnessed firsthand his exceptional ability to break down complex problems into manageable solutions. His mentoring helped me grow from a senior developer to a tech lead. He creates an environment where innovation thrives and everyone can do their best work.",
+      "author": "Jennifer Kim",
+      "position": "Senior Technical Lead",
+      "company": "TechGlobal Solutions",
+      "relationship": "Direct Report",
+      "date": "2024-05-25",
+      "projectContext": "Team Leadership and Development",
+      "skills": ["Team Leadership", "Mentoring", "Problem Solving"],
+      "rating": 5,
+      "avatar": "/assets/images/testimonials/jennifer-kim.jpg"
+    }
+  ],
+  "contact": {
+    "id": 1,
+    "email": "sri.ramanujam@example.com",
+    "phone": "+1-555-123-4567",
+    "location": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA",
+      "timezone": "PST",
+      "coordinates": {
+        "lat": 37.7749,
+        "lng": -122.4194
+      }
+    },
+    "availability": {
+      "status": "Available for new opportunities",
+      "preferredContactMethod": "email",
+      "responseTime": "Within 24 hours",
+      "workingHours": "9 AM - 6 PM PST",
+      "availability": "Immediate"
+    },
+    "socialMedia": {
+      "linkedin": "https://linkedin.com/in/sri-ramanujam",
+      "github": "https://github.com/sri-ramanujam",
+      "twitter": "https://twitter.com/sri_architect",
+      "website": "https://sri-architect.com",
+      "blog": "https://sri-architect.com/blog"
+    },
+    "preferredRoles": [
+      "Solution Architect",
+      "Technical Architect",
+      "Engineering Manager",
+      "VP of Engineering",
+      "CTO"
+    ],
+    "employmentType": ["Full-time", "Contract", "Consulting"],
+    "remoteWork": true,
+    "relocation": false,
+    "salaryExpectation": {
+      "currency": "USD",
+      "range": "Competitive based on role and responsibilities"
+    },
+    "interests": [
+      "Solution Architecture",
+      "Cloud Technologies",
+      "Team Leadership",
+      "Digital Transformation",
+      "Innovation"
+    ]
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2024-09-20T13:46:53Z",
+    "dataFormat": "JSON",
+    "schema": "portfolio-v1",
+    "totalRecords": {
+      "profile": 1,
+      "experience": 4,
+      "skills": 27,
+      "projects": 2,
+      "education": 2,
+      "certifications": 4,
+      "testimonials": 4,
+      "contact": 1
+    },
+    "statistics": {
+      "totalYearsExperience": 15,
+      "totalProjects": 50,
+      "totalTeamMembers": 100,
+      "totalBudgetManaged": "$10M+"
+    }
+  }
+}

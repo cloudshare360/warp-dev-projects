@@ -1,0 +1,114 @@
+{
+  "valid_users": [
+    {
+      "username": "johndoe",
+      "email": "john.doe@example.com",
+      "password": "SecurePass123!",
+      "confirmPassword": "SecurePass123!",
+      "firstName": "John",
+      "lastName": "Doe",
+      "phone": "+1234567890",
+      "dateOfBirth": "1990-01-15",
+      "avatar": "https://example.com/avatars/johndoe.jpg"
+    },
+    {
+      "username": "janesmith",
+      "email": "jane.smith@example.com",
+      "password": "MyPassword456@",
+      "confirmPassword": "MyPassword456@",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "phone": "+1987654321",
+      "dateOfBirth": "1988-06-22",
+      "avatar": "https://example.com/avatars/janesmith.jpg"
+    },
+    {
+      "username": "bobwilson",
+      "email": "bob.wilson@example.com",
+      "password": "BobSecure789#",
+      "confirmPassword": "BobSecure789#",
+      "firstName": "Bob",
+      "lastName": "Wilson",
+      "phone": "+1122334455",
+      "dateOfBirth": "1995-03-10",
+      "avatar": "https://example.com/avatars/bobwilson.jpg"
+    }
+  ],
+  "invalid_users": [
+    {
+      "description": "Missing username",
+      "email": "test@example.com",
+      "password": "Test123!",
+      "confirmPassword": "Test123!",
+      "firstName": "Test",
+      "lastName": "User"
+    },
+    {
+      "description": "Invalid email format",
+      "username": "testuser",
+      "email": "invalid-email",
+      "password": "Test123!",
+      "confirmPassword": "Test123!",
+      "firstName": "Test",
+      "lastName": "User"
+    },
+    {
+      "description": "Password mismatch",
+      "username": "testuser2",
+      "email": "test2@example.com",
+      "password": "Test123!",
+      "confirmPassword": "Different123!",
+      "firstName": "Test",
+      "lastName": "User"
+    },
+    {
+      "description": "Weak password",
+      "username": "testuser3",
+      "email": "test3@example.com",
+      "password": "weak",
+      "confirmPassword": "weak",
+      "firstName": "Test",
+      "lastName": "User"
+    }
+  ],
+  "edge_cases": [
+    {
+      "description": "Username with special characters",
+      "username": "user_123-test",
+      "email": "special@example.com",
+      "password": "Special123!@#",
+      "confirmPassword": "Special123!@#",
+      "firstName": "Special",
+      "lastName": "User"
+    },
+    {
+      "description": "Very long names",
+      "username": "verylongusername12345678901234567890",
+      "email": "longname@example.com",
+      "password": "LongPass123!",
+      "confirmPassword": "LongPass123!",
+      "firstName": "VeryLongFirstNameThatExceedsNormalLength",
+      "lastName": "VeryLongLastNameThatExceedsNormalLength"
+    }
+  ],
+  "sql_injection_tests": [
+    {
+      "description": "SQL injection in username",
+      "username": "admin' OR '1'='1",
+      "email": "sql@test.com",
+      "password": "Test123!",
+      "confirmPassword": "Test123!",
+      "firstName": "SQL",
+      "lastName": "Test"
+    },
+    {
+      "description": "SQL injection in email",
+      "username": "sqltest",
+      "email": "test@example.com'; DROP TABLE users; --",
+      "password": "Test123!",
+      "confirmPassword": "Test123!",
+      "firstName": "SQL",
+      "lastName": "Test"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+sri        21142  8.9  7.3 3027944 601188 ?      Rl   09:40   1:11 warp-terminal
+sri         3156  1.3  5.5 225698936 449212 ?    Sl   Sep22  16:49 /proc/self/exe --type=renderer --enable-crash-reporter=4e3e625d-84f8-464d-b178-599022b39648,no_channel --user-data-dir=/home/sri/.config/teams-for-linux --app-path=/opt/teams-for-linux/resources/app.asar --no-sandbox --no-zygote --use-fake-ui-for-media-stream --lang=en-GB --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1758563651773132 --launch-time-ticks=59186149 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,9318159004505947179,13558502060318398121,262144 --enable-features=PdfUseShowSaveFilePicker,WebRTCPipeWireCapturer --disable-features=HardwareMediaKeyHandling,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version
+sri         2873  0.0  1.3 339967356 109248 ?    Sl   Sep22   1:00 /opt/teams-for-linux/teams-for-linux
+sri         1071  0.0  0.8 689984 70212 ?        Sl   Sep22   0:06 /usr/bin/pcmanfm --desktop --profile LXDE-pi
+dnsmasq     2272  0.4  0.8 542644 66688 ?        Ssl  Sep22   5:52 mongod --auth --bind_ip_all
+sri          873  1.6  0.6 689400 54760 ?        Ssl  Sep22  20:46 /usr/bin/labwc -m
+sri         3064  0.3  0.5 34138584 45660 ?      Sl   Sep22   4:01 /opt/teams-for-linux/teams-for-linux --type=zygote --no-zygote-sandbox
+sri         3071  0.0  0.5 34075912 41508 ?      Sl   Sep22   1:09 /proc/self/exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-GB --service-sandbox-type=none --enable-crash-reporter=4e3e625d-84f8-464d-b178-599022b39648,no_channel --user-data-dir=/home/sri/.config/teams-for-linux --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,9318159004505947179,13558502060318398121,262144 --enable-features=PdfUseShowSaveFilePicker,WebRTCPipeWireCapturer --disable-features=HardwareMediaKeyHandling,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version
+sri         1068  0.0  0.4 955632 36088 ?        Sl   Sep22   0:32 /usr/bin/wf-panel-pi
+root        1470  0.0  0.3 2413524 31724 ?       Ssl  Sep22   0:15 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        2405  0.0  0.3 350132 27548 ?        Sl   Sep22   0:11 node app
+sri         2903  0.0  0.3 337088 25308 ?        Sl   Sep22   0:44 /usr/bin/Xwayland -auth /home/sri/.Xauthority :0 -rootless -core -terminate 10 -listenfd 31 -listenfd 32 -displayfd 102 -wm 99
+sri         1185  0.0  0.2 976408 22552 ?        Ssl  Sep22   0:02 /usr/libexec/xdg-desktop-portal-gtk
+sri         3087  0.0  0.2 222174392 22180 ?     Sl   Sep22   0:00 /opt/teams-for-linux/teams-for-linux --type=zygote
+sri        21151  0.0  0.2 284972 21644 ?        Sl   09:40   0:00 /opt/warpdotdev/warp-terminal/warp terminal-server --parent-pid=21142
+root         791  0.0  0.2 2083784 20712 ?       Ssl  Sep22   0:29 /usr/bin/containerd
+sri         3218  0.4  0.2 34170180 17884 ?      Sl   Sep22   5:42 /proc/self/exe --type=utility --utility-sub-type=audio.mojom.AudioService --lang=en-GB --service-sandbox-type=none --enable-crash-reporter=4e3e625d-84f8-464d-b178-599022b39648,no_channel --user-data-dir=/home/sri/.config/teams-for-linux --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,9318159004505947179,13558502060318398121,262144 --enable-features=PdfUseShowSaveFilePicker,WebRTCPipeWireCapturer --disable-features=HardwareMediaKeyHandling,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version
+sri         2137  0.0  0.1 428496 15068 ?        SLsl Sep22   0:00 /usr/bin/wayvnc --config /etc/rpi-connect/wayvnc.config --render-cursor --unix-socket --socket=/run/user/1000/rpi-connect-wayvnc-ctl.sock /run/user/1000/rpi-connect-wayvnc.sock
+sri          871  0.1  0.1 205936 12780 ?        S<sl Sep22   1:54 /usr/bin/pipewire-pulse

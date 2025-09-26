@@ -1,0 +1,20 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+sri        26178  2.2  6.8 3053256 560708 ?      Sl   11:47   0:23 warp-terminal
+sri        26192  0.3  5.8 3030268 477824 ?      Sl   11:47   0:03 warp-terminal
+dnsmasq     2296  0.4  1.7 539500 140836 ?       Ssl  11:44   0:05 mongod --auth --bind_ip_all
+sri          890  0.2  1.2 663248 103220 ?       Ssl  11:44   0:02 /usr/bin/labwc -m
+sri         2119  0.0  1.1 428496 90928 ?        SLsl 11:44   0:00 /usr/bin/wayvnc --config /etc/rpi-connect/wayvnc.config --render-cursor --unix-socket --socket=/run/user/1000/rpi-connect-wayvnc-ctl.sock /run/user/1000/rpi-connect-wayvnc.sock
+sri         4074  0.0  1.0 335272 88064 ?        Sl   11:46   0:00 /usr/bin/Xwayland -auth /home/sri/.Xauthority :0 -rootless -core -terminate 10 -listenfd 31 -listenfd 32 -displayfd 97 -wm 94
+root        1485  0.0  0.9 2413268 74496 ?       Ssl  11:44   0:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        2434  0.1  0.8 4581636 70676 ?       Sl   11:44   0:01 node app
+sri         1086  0.1  0.7 951796 64516 ?        Sl   11:44   0:01 /usr/bin/wf-panel-pi
+sri         1087  0.0  0.7 597104 59360 ?        Sl   11:44   0:01 /usr/bin/pcmanfm --desktop --profile LXDE-pi
+sri         1230  0.0  0.7 293068 58552 ?        Ssl  11:44   0:00 /usr/libexec/xdg-desktop-portal-wlr
+root         812  0.0  0.5 2009992 42356 ?       Ssl  11:44   0:00 /usr/bin/containerd
+sri          886  0.0  0.3 465604 31972 ?        S<sl 11:44   0:00 /usr/bin/wireplumber
+sri         1201  0.0  0.3 345560 24848 ?        Ssl  11:44   0:00 /usr/libexec/xdg-desktop-portal-gtk
+sri        26186  0.0  0.2 284972 22068 ?        Sl   11:47   0:00 /opt/warpdotdev/warp-terminal/warp terminal-server --parent-pid=26178
+sri        26199  0.0  0.2 284972 21972 ?        Sl   11:47   0:00 /opt/warpdotdev/warp-terminal/warp terminal-server --parent-pid=26192
+sri         1085  0.0  0.2 341388 19932 ?        Sl   11:44   0:00 /usr/libexec/polkit-mate-authentication-agent-1
+sri         1088  0.0  0.2 340880 19828 ?        Sl   11:44   0:00 gtk-nop
+root         771  0.0  0.2 263316 19644 ?        Ssl  11:44   0:00 /usr/sbin/NetworkManager --no-daemon

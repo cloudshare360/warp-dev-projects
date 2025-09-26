@@ -1,0 +1,35 @@
+# Advanced RPi5 Overclocking Configuration - 2700MHz
+# Generated: 2025-09-23 17:28:01
+# Target: 2700MHz at +11 voltage (Incremental step +35%)
+# Description: Step 4 toward 3000MHz target
+# Previous: 2600MHz stable at 56.5°C
+
+# Core CPU Configuration
+arm_freq=2700
+over_voltage=11
+
+# Advanced Overclocking Settings
+force_turbo=1                    # Always run at maximum frequency
+temp_limit=80                    # Temperature limit based on good cooling
+initial_turbo=0                  # Disable turbo timeout
+avoid_warnings=1                 # Bypass overclocking warnings
+
+# Enhanced Memory Configuration  
+sdram_freq=3600                  # High-speed RAM
+over_voltage_sdram=6             # RAM voltage boost
+sdram_over_voltage=6             # Additional RAM voltage
+
+# GPU and Core Overclocking
+gpu_freq=800                     # Overclock GPU
+core_freq=800                    # Core frequency boost  
+h264_freq=800                    # Video encoding boost
+isp_freq=800                     # Image processing boost
+
+# Stability Enhancements
+arm_freq_min=2700                # Minimum frequency (no scaling)
+gpu_mem=8                        # Minimal GPU memory
+disable_splash=1                 # Faster boot
+boot_delay=0                     # No boot delay
+
+# Thermal Management
+dtparam=act_led_trigger=cpu      # LED shows CPU activity for monitoring

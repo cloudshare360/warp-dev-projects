@@ -1,0 +1,35 @@
+{
+  "name": "portfolio-swagger-ui",
+  "version": "1.0.0",
+  "description": "Standalone Swagger UI documentation for Portfolio REST API",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server dist -p 3002 -c-1 --cors",
+    "dev": "http-server dist -p 3002 -c-1 --cors",
+    "build": "node scripts/build.js",
+    "serve": "npm run build && npm start",
+    "generate": "node scripts/generate-spec.js",
+    "validate": "swagger-spec-validator swagger.json"
+  },
+  "keywords": [
+    "swagger",
+    "api-documentation",
+    "portfolio",
+    "rest-api"
+  ],
+  "author": "Solution Architect",
+  "license": "MIT",
+  "dependencies": {
+    "swagger-ui-dist": "^5.9.0",
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.1.1",
+    "axios": "^1.5.0",
+    "chalk": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

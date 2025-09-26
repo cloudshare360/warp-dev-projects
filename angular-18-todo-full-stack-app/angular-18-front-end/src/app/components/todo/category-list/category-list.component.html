@@ -1,0 +1,89 @@
+<div class="category-list-container">
+  <div class="category-header">
+    <h3>Categories</h3>
+    <button class="btn btn-primary btn-sm" (click)="toggleAddForm()">
+      {{ showAddForm ? 'Cancel' : '+ Add Category' }}
+    </button>
+  </div>
+
+  <!-- Add Category Form -->
+  <div *ngIf="showAddForm" class="add-category-form">
+    <div class="form-group">
+      <input 
+        type="text" 
+        [(ngModel)]="newCategory.name" 
+        placeholder="Category name"
+        class="form-control">
+    </div>
+    <div class="form-group">
+      <textarea 
+        [(ngModel)]="newCategory.description" 
+        placeholder="Description (optional)"
+        class="form-control" 
+        rows="2"></textarea>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-success btn-sm" (click)="createCategory()">Create</button>
+      <button class="btn btn-secondary btn-sm" (click)="toggleAddForm()">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Show All Button -->
+  <div class="category-item" 
+       [class.active]="selectedCategoryId === null"
+       (click)="showAll()">
+    <span class="category-name">📋 All Tasks</span>
+  </div>
+
+  <!-- Categories List -->
+  <div *ngFor="let category of categories" class="category-item"
+       [class.active]="selectedCategoryId === category.id">
+    
+    <!-- View Mode -->
+    <div *ngIf="editingCategory?.id !== category.id" class="category-view" (click)="selectCategory(category.id!)">
+      <span class="category-name">📁 {{ category.name }}</span>
+      <div class="category-actions">
+        <button class="btn-icon" (click)="startEdit(category); $event.stopPropagation()" title="Edit">
+          ✏️
+        </button>
+        <button class="btn-icon" (click)="deleteCategory(category); $event.stopPropagation()" title="Delete">
+          🗑️
+        </button>
+      </div>
+    </div>
+
+    <!-- Edit Mode -->
+    <div *ngIf="editingCategory?.id === category.id" class="category-edit">
+      <div class="form-group">
+        <input 
+          type="text" 
+          [(ngModel)]="editingCategory.name" 
+          class="form-control">
+      </div>
+      <div class="form-group">
+        <textarea 
+          [(ngModel)]="editingCategory.description" 
+          class="form-control" 
+          rows="2"></textarea>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-success btn-sm" (click)="saveEdit()">Save</button>
+        <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty State -->
+  <div *ngIf="categories.length === 0" class="empty-state">
+    <p>No categories yet. Create your first category to organize your tasks!</p>
+  </div>
+
+  <!-- Messages -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  
+  <div *ngIf="successMessage" class="success-message">
+    {{ successMessage }}
+  </div>
+</div>

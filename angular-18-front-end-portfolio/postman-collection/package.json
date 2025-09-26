@@ -1,0 +1,49 @@
+{
+  "name": "portfolio-api-postman-tests",
+  "version": "1.0.0",
+  "description": "Postman collection tests for Portfolio API with Newman automation",
+  "main": "run-tests.js",
+  "scripts": {
+    "test": "node run-tests.js",
+    "test:main": "node run-tests.js -c main",
+    "test:performance": "node run-tests.js -c performance",
+    "test:all": "node run-tests.js -c all",
+    "test:html": "node run-tests.js -r html",
+    "test:json": "node run-tests.js -r json",
+    "test:junit": "node run-tests.js -r junit",
+    "test:ci": "node run-tests.js -c all -r junit -o ./reports --bail",
+    "test:performance:load": "node run-tests.js -c performance -n 10",
+    "install-dependencies": "npm install",
+    "help": "node run-tests.js --help"
+  },
+  "keywords": [
+    "postman",
+    "newman",
+    "api-testing",
+    "portfolio",
+    "express",
+    "rest-api",
+    "automation",
+    "testing"
+  ],
+  "author": "Portfolio API Team",
+  "license": "MIT",
+  "devDependencies": {
+    "newman": "^5.3.2",
+    "commander": "^10.0.1"
+  },
+  "optionalDependencies": {
+    "newman-reporter-htmlextra": "^1.22.11"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/angular-18-front-end-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/angular-18-front-end-portfolio/issues"
+  },
+  "homepage": "https://github.com/your-username/angular-18-front-end-portfolio#readme"
+}

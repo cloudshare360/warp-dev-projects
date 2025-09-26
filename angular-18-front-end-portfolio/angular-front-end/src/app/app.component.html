@@ -1,0 +1,225 @@
+<mat-toolbar color="primary">
+  <mat-icon>dashboard</mat-icon>
+  <span style="margin-left: 10px;">{{ title }}</span>
+  <span style="flex: 1 1 auto;"></span>
+  <button mat-raised-button color="accent" (click)="refreshAll()">
+    <mat-icon>refresh</mat-icon>
+    Refresh All
+  </button>
+</mat-toolbar>
+
+<div style="padding: 20px;">
+  <!-- API Health Status -->
+  <mat-card style="margin-bottom: 20px;">
+    <mat-card-header>
+      <mat-card-title>
+        <mat-icon>health_and_safety</mat-icon>
+        API Health Status
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="apiHealthLoading" style="text-align: center; padding: 20px;">
+        <mat-spinner diameter="40"></mat-spinner>
+        <p style="margin-top: 10px;">Checking API health...</p>
+      </div>
+      
+      <div *ngIf="apiHealthError && !apiHealthLoading" style="color: #f44336;">
+        <mat-icon>error</mat-icon>
+        Error: {{ apiHealthError }}
+      </div>
+      
+      <div *ngIf="apiHealth && !apiHealthLoading">
+        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+          <mat-icon style="color: #4caf50;">check_circle</mat-icon>
+          <strong style="margin-left: 10px;">{{ apiHealth.message }}</strong>
+        </div>
+        <p><strong>Status:</strong> {{ apiHealth.data?.status }}</p>
+        <p><strong>Uptime:</strong> {{ apiHealth.data?.uptime }}</p>
+        <p><strong>Version:</strong> {{ apiHealth.data?.version }}</p>
+        <p><strong>Environment:</strong> {{ apiHealth.data?.environment }}</p>
+        <p><strong>Memory Used:</strong> {{ apiHealth.data?.memory?.used }}MB</p>
+        <p><strong>Platform:</strong> {{ apiHealth.data?.platform }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Profile Data -->
+  <mat-card style="margin-bottom: 20px;">
+    <mat-card-header>
+      <mat-card-title>
+        <mat-icon>person</mat-icon>
+        Profile Information
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="profileLoading" style="text-align: center; padding: 20px;">
+        <mat-spinner diameter="40"></mat-spinner>
+        <p style="margin-top: 10px;">Loading profile...</p>
+      </div>
+      
+      <div *ngIf="profileError && !profileLoading" style="color: #f44336;">
+        <mat-icon>error</mat-icon>
+        Error: {{ profileError }}
+      </div>
+      
+      <div *ngIf="profile && !profileLoading">
+        <h3>{{ profile.name }}</h3>
+        <h4>{{ profile.title }}</h4>
+        <p><em>{{ profile.tagline }}</em></p>
+        <mat-divider style="margin: 15px 0;"></mat-divider>
+        <p><strong>Email:</strong> {{ profile.email }}</p>
+        <p><strong>Phone:</strong> {{ profile.phone }}</p>
+        <p><strong>Location:</strong> {{ profile.location }}</p>
+        
+        <h4>Key Highlights:</h4>
+        <mat-chip-set>
+          <mat-chip *ngFor="let highlight of profile.highlights">{{ highlight }}</mat-chip>
+        </mat-chip-set>
+        
+        <h4 style="margin-top: 15px;">Social Links:</h4>
+        <p><strong>LinkedIn:</strong> <a [href]="profile.socialLinks?.linkedin" target="_blank">{{ profile.socialLinks?.linkedin }}</a></p>
+        <p><strong>GitHub:</strong> <a [href]="profile.socialLinks?.github" target="_blank">{{ profile.socialLinks?.github }}</a></p>
+        <p><strong>Website:</strong> <a [href]="profile.socialLinks?.website" target="_blank">{{ profile.socialLinks?.website }}</a></p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Experience Data -->
+  <mat-card style="margin-bottom: 20px;">
+    <mat-card-header>
+      <mat-card-title>
+        <mat-icon>work</mat-icon>
+        Work Experience ({{ experience.length }} entries)
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="experienceLoading" style="text-align: center; padding: 20px;">
+        <mat-spinner diameter="40"></mat-spinner>
+        <p style="margin-top: 10px;">Loading experience...</p>
+      </div>
+      
+      <div *ngIf="experienceError && !experienceLoading" style="color: #f44336;">
+        <mat-icon>error</mat-icon>
+        Error: {{ experienceError }}
+      </div>
+      
+      <div *ngIf="experience.length > 0 && !experienceLoading">
+        <div *ngFor="let exp of experience; let i = index" style="margin-bottom: 15px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px;">
+          <h4>{{ exp.position }} &#64; {{ exp.company }}</h4>
+          <p><strong>Period:</strong> {{ exp.startDate }} - {{ exp.current ? 'Present' : exp.endDate }}</p>
+          <p><strong>Location:</strong> {{ exp.location }}</p>
+          <p>{{ exp.description }}</p>
+          
+          <div *ngIf="exp.technologies && exp.technologies.length > 0" style="margin-top: 10px;">
+            <strong>Technologies:</strong>
+            <mat-chip-set>
+              <mat-chip *ngFor="let tech of exp.technologies">{{ tech }}</mat-chip>
+            </mat-chip-set>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Projects Data -->
+  <mat-card style="margin-bottom: 20px;">
+    <mat-card-header>
+      <mat-card-title>
+        <mat-icon>construction</mat-icon>
+        Portfolio Projects ({{ projects.length }} projects)
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="projectsLoading" style="text-align: center; padding: 20px;">
+        <mat-spinner diameter="40"></mat-spinner>
+        <p style="margin-top: 10px;">Loading projects...</p>
+      </div>
+      
+      <div *ngIf="projectsError && !projectsLoading" style="color: #f44336;">
+        <mat-icon>error</mat-icon>
+        Error: {{ projectsError }}
+      </div>
+      
+      <div *ngIf="projects.length > 0 && !projectsLoading">
+        <div *ngFor="let project of projects; let i = index" style="margin-bottom: 15px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px;">
+          <div style="display: flex; align-items: center;">
+            <h4 style="flex: 1;">{{ project.title }}</h4>
+            <mat-chip *ngIf="project.featured" color="accent" selected>Featured</mat-chip>
+            <mat-chip [style.background-color]="project.status === 'Completed' ? '#4caf50' : '#ff9800'">{{ project.status }}</mat-chip>
+          </div>
+          <p>{{ project.description }}</p>
+          
+          <div *ngIf="project.technologies && project.technologies.length > 0" style="margin-top: 10px;">
+            <strong>Technologies:</strong>
+            <mat-chip-set>
+              <mat-chip *ngFor="let tech of project.technologies">{{ tech }}</mat-chip>
+            </mat-chip-set>
+          </div>
+          
+          <div *ngIf="project.demoUrl || project.githubUrl" style="margin-top: 10px;">
+            <button *ngIf="project.demoUrl" mat-stroked-button color="primary" style="margin-right: 10px;">
+              <mat-icon>launch</mat-icon>
+              Demo
+            </button>
+            <button *ngIf="project.githubUrl" mat-stroked-button>
+              <mat-icon>code</mat-icon>
+              GitHub
+            </button>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Test Summary -->
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <mat-icon>assessment</mat-icon>
+        Integration Test Summary
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+        <div style="text-align: center; padding: 15px; background: #e8f5e8; border-radius: 8px;">
+          <mat-icon style="font-size: 48px; color: #4caf50;">{{ apiHealth ? 'check_circle' : 'error' }}</mat-icon>
+          <h4>API Health</h4>
+          <p>{{ apiHealth ? 'Connected' : 'Failed' }}</p>
+        </div>
+        
+        <div style="text-align: center; padding: 15px; background: #e3f2fd; border-radius: 8px;">
+          <mat-icon style="font-size: 48px; color: #2196f3;">{{ profile ? 'person' : 'person_off' }}</mat-icon>
+          <h4>Profile Data</h4>
+          <p>{{ profile ? 'Loaded' : 'Failed' }}</p>
+        </div>
+        
+        <div style="text-align: center; padding: 15px; background: #fff3e0; border-radius: 8px;">
+          <mat-icon style="font-size: 48px; color: #ff9800;">{{ experience.length > 0 ? 'work' : 'work_off' }}</mat-icon>
+          <h4>Experience</h4>
+          <p>{{ experience.length }} entries</p>
+        </div>
+        
+        <div style="text-align: center; padding: 15px; background: #f3e5f5; border-radius: 8px;">
+          <mat-icon style="font-size: 48px; color: #9c27b0;">{{ projects.length > 0 ? 'construction' : 'construction_off' }}</mat-icon>
+          <h4>Projects</h4>
+          <p>{{ projects.length }} projects</p>
+        </div>
+      </div>
+      
+      <mat-divider style="margin: 20px 0;"></mat-divider>
+      
+      <div style="text-align: center;">
+        <h3 style="color: #4caf50;" *ngIf="apiHealth && profile && experience.length > 0 && projects.length > 0">
+          <mat-icon>celebration</mat-icon>
+          All Systems Operational! Full-Stack Integration Successful!
+        </h3>
+        <h3 style="color: #f44336;" *ngIf="!apiHealth || !profile || experience.length === 0 || projects.length === 0">
+          <mat-icon>warning</mat-icon>
+          Some Services Not Available - Check API Connectivity
+        </h3>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<router-outlet></router-outlet>

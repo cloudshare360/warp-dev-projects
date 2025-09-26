@@ -1,0 +1,1 @@
+/home/sri/rpi5-optimization-backup/adaptive_configs/adaptive-cpu-2000mhz_20250923_112011

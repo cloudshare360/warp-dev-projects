@@ -1,0 +1,116 @@
+<div class="todo-list-container">
+  <!-- Header Section -->
+  <div class="todo-header">
+    <div class="header-top">
+      <h3>Tasks</h3>
+      <button class="btn btn-primary btn-sm" (click)="toggleAddForm()">
+        {{ showAddForm ? 'Cancel' : '+ Add Task' }}
+      </button>
+    </div>
+    
+    <!-- Quick Stats -->
+    <div class="quick-stats">
+      <span class="stat-badge total">{{ todoStats.total }} Total</span>
+      <span class="stat-badge pending">{{ todoStats.pending }} Pending</span>
+      <span class="stat-badge completed">{{ todoStats.completed }} Done</span>
+      <span class="stat-badge high-priority" *ngIf="todoStats.highPriority > 0">
+        {{ todoStats.highPriority }} High Priority
+      </span>
+    </div>
+  </div>
+
+  <!-- Add Todo Form -->
+  <div *ngIf="showAddForm" class="add-todo-form">
+    <div class="form-row">
+      <div class="form-group flex-2">
+        <input 
+          type="text" 
+          [(ngModel)]="newTodo.title" 
+          placeholder="Task title"
+          class="form-control">
+      </div>
+      <div class="form-group flex-1">
+        <select [(ngModel)]="newTodo.categoryId" class="form-control">
+          <option [ngValue]="null">Select Category</option>
+          <option *ngFor="let category of categories" [ngValue]="category.id">
+            {{ category.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group flex-1">
+        <select [(ngModel)]="newTodo.priority" class="form-control">
+          <option value="low">Low Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <textarea 
+        [(ngModel)]="newTodo.description" 
+        placeholder="Description (optional)"
+        class="form-control" 
+        rows="2"></textarea>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-success btn-sm" (click)="createTodo()">Create Task</button>
+      <button class="btn btn-secondary btn-sm" (click)="toggleAddForm()">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Filters and Sort -->
+  <div class="todo-controls" *ngIf="todos.length > 0">
+    <div class="filters">
+      <label>Filter:</label>
+      <select [(ngModel)]="filterStatus" class="form-control-sm">
+        <option value="all">All Tasks</option>
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+    <div class="sorting">
+      <label>Sort by:</label>
+      <select [(ngModel)]="sortBy" class="form-control-sm">
+        <option value="created">Date Created</option>
+        <option value="priority">Priority</option>
+        <option value="title">Title</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Todo List -->
+  <div class="todo-items">
+    <div *ngFor="let todo of filteredAndSortedTodos; trackBy: trackByTodoId" class="todo-item-wrapper">
+      <app-todo-item 
+        [todo]="todo"
+        [categoryName]="getCategoryName(todo.categoryId)"
+        (todoChanged)="onTodoChanged()">
+      </app-todo-item>
+    </div>
+  </div>
+
+  <!-- Empty State -->
+  <div *ngIf="todos.length === 0" class="empty-state">
+    <div class="empty-icon">📝</div>
+    <h4>No tasks yet!</h4>
+    <p>Create your first task to get started with organizing your work.</p>
+    <button class="btn btn-primary" (click)="toggleAddForm()" *ngIf="!showAddForm">
+      Create Your First Task
+    </button>
+  </div>
+
+  <!-- No Results State -->
+  <div *ngIf="todos.length > 0 && filteredAndSortedTodos.length === 0" class="no-results">
+    <p>No tasks match your current filter criteria.</p>
+    <button class="btn btn-secondary btn-sm" (click)="filterStatus = 'all'">Show All Tasks</button>
+  </div>
+
+  <!-- Messages -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  
+  <div *ngIf="successMessage" class="success-message">
+    {{ successMessage }}
+  </div>
+</div>

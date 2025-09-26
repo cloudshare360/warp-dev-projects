@@ -1,0 +1,104 @@
+{
+  "valid_lists": [
+    {
+      "title": "Personal Tasks",
+      "description": "My personal todo list for daily activities",
+      "color": "#FF5722",
+      "isDefault": true
+    },
+    {
+      "title": "Work Projects",
+      "description": "Important work-related tasks and deadlines",
+      "color": "#2196F3",
+      "isDefault": false
+    },
+    {
+      "title": "Shopping List",
+      "description": "Groceries and household items",
+      "color": "#4CAF50",
+      "isDefault": false
+    },
+    {
+      "title": "Reading List",
+      "description": "Books and articles to read",
+      "color": "#9C27B0",
+      "isDefault": false
+    }
+  ],
+  "valid_todos": [
+    {
+      "title": "Complete project documentation",
+      "description": "Finish writing the API documentation for the new features",
+      "priority": "high",
+      "dueDate": "2025-09-25T10:00:00Z",
+      "tags": ["work", "urgent", "documentation"]
+    },
+    {
+      "title": "Buy groceries",
+      "description": "Milk, eggs, bread, vegetables, and fruits",
+      "priority": "medium",
+      "dueDate": "2025-09-22T18:00:00Z",
+      "tags": ["shopping", "personal"]
+    },
+    {
+      "title": "Call dentist for appointment",
+      "description": "Schedule regular checkup for next month",
+      "priority": "low",
+      "dueDate": "2025-09-30T12:00:00Z",
+      "tags": ["health", "personal"]
+    },
+    {
+      "title": "Review pull requests",
+      "description": "Review and merge pending PRs from the team",
+      "priority": "high",
+      "dueDate": "2025-09-21T17:00:00Z",
+      "tags": ["work", "code-review"]
+    },
+    {
+      "title": "Plan weekend trip",
+      "description": "Research destinations and book accommodations",
+      "priority": "medium",
+      "dueDate": "2025-09-28T20:00:00Z",
+      "tags": ["personal", "travel", "planning"]
+    }
+  ],
+  "invalid_todos": [
+    {
+      "description": "Missing title",
+      "priority": "high",
+      "dueDate": "2025-09-25T10:00:00Z"
+    },
+    {
+      "description": "Invalid priority",
+      "title": "Test todo",
+      "priority": "super-urgent",
+      "dueDate": "2025-09-25T10:00:00Z"
+    },
+    {
+      "description": "Invalid date format",
+      "title": "Test todo",
+      "priority": "high",
+      "dueDate": "not-a-date"
+    }
+  ],
+  "edge_case_todos": [
+    {
+      "title": "Todo with very long title that exceeds the normal character limit for a todo item title to test the system boundaries",
+      "description": "This is a very long description that contains a lot of text to test how the system handles extremely long content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "priority": "medium",
+      "tags": ["test", "edge-case", "long-content", "boundary-test", "system-test", "qa", "validation", "extreme", "limit", "maximum"]
+    },
+    {
+      "title": "Todo with special characters: !@#$%^&*(){}[]|\\:\";<>?,./`~",
+      "description": "Testing special characters in content",
+      "priority": "low",
+      "tags": ["special-chars", "!@#$%"]
+    },
+    {
+      "title": "Todo with unicode: 你好世界 مرحبا بالعالم שלום עולם",
+      "description": "Testing unicode characters from different languages",
+      "priority": "medium",
+      "tags": ["unicode", "international", "多语言"]
+    }
+  ]
+}
